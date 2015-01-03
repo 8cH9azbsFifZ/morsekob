@@ -35,3 +35,11 @@ Integration of the applications:
 https://sites.google.com/site/morsekob/morsekob40/downloads
 
 
+
+# Server installation
+
+The [requirements](https://sites.google.com/site/morsekob/server/requirements).
+
+The [server software](https://sites.google.com/site/morsekob/server/software) resides now in the
+directory Server.
+
