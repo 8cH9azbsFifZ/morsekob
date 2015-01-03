@@ -15,10 +15,6 @@ sudo apt-get install python-serial  # or python3-serial
 sudo apt-get install python-pyaudio  # or python3-pyaudio, python-pyaudio:i386...
 
 
-Integration of the PyKOB Package
-
-wget http://kob.sdf.org/morsekob/python/PyKOB-1.0.0.tar.gz
-tar -zxvf PyKOB-1.0.0.tar.gz
 cd PyKOB-1.0.0
 sudo python setup.py install
 
