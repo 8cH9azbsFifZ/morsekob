@@ -9,16 +9,29 @@ The [requirements](https://sites.google.com/site/morsekob/morsekob40/requirement
 build process:
 
 
+# Build
+Installation of the dependencies
+sudo apt-get install python-serial  # or python3-serial
+sudo apt-get install python-pyaudio  # or python3-pyaudio, python-pyaudio:i386...
+
+
+Integration of the PyKOB Package
 
 wget http://kob.sdf.org/morsekob/python/PyKOB-1.0.0.tar.gz
 tar -zxvf PyKOB-1.0.0.tar.gz
 cd PyKOB-1.0.0
 sudo python setup.py install
 
-
-sudo apt-get install python-serial  # or python3-serial
-sudo apt-get install python-pyaudio  # or python3-pyaudio, python-pyaudio:i386...
-
-
+Verification of the installation:
 python -m pykob.syscheck
+
+
+
+
+# Applications
+Integration of the applications:
+
+((( not used: wget https://sites.google.com/site/morsekob/morsekob40/downloads/Sample.py
+https://sites.google.com/site/morsekob/morsekob40/downloads
+
 
