@@ -14,22 +14,25 @@ Installation of the dependencies
 sudo apt-get install python-serial  # or python3-serial
 sudo apt-get install python-pyaudio  # or python3-pyaudio, python-pyaudio:i386...
 
+on OSX: 
+port install py-serial
+port install py-pyaudio
 
-cd PyKOB-1.0.0
+
+cd PyKOB
 sudo python setup.py install
 
 Verification of the installation:
+osx: python2.7 -m pykob.syscheck
 python -m pykob.syscheck
 
 
 
 
 # Applications
-Integration of the applications:
+The [applications](https://sites.google.com/site/morsekob/morsekob40/downloads) are under Applications
 
-((( not used: wget https://sites.google.com/site/morsekob/morsekob40/downloads/Sample.py
-https://sites.google.com/site/morsekob/morsekob40/downloads
-
+PYTHONPATH=$PYTHONPATH:/Library/Python/2.7/site-packages/ python2.7 Sample.py 
 
 
 # Server installation

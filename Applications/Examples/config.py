@@ -1,10 +1,10 @@
 # MorseKOB 4.0 configuration settings
 
-PORT  = 'COM3'  # typical for Windows
+#PORT  = 'COM3'  # typical for Windows
 #PORT  = '/dev/ttyUSB0'  # typical for Linux
-#PORT  = None
+PORT  = None
 
-AUDIO = False  # enable simulated sounder
+AUDIO = True # enable simulated sounder
 
 #ECHO  = True  # make sounder follow key (false for loop interface?)
 

@@ -26,7 +26,7 @@ if sys.platform == 'win32':
     windll.winmm.timeBeginPeriod(1)  # set clock resoluton to 1 ms (Windows only)
 
 class KOB:
-    def __init__(self, port=None, audio=False, echo=False, callback=None):
+    def __init__(self, port=None, audio=True, echo=False, callback=None):
         if port and ok:
             try:
                 self.port = serial.Serial(port)
@@ -90,6 +90,7 @@ class KOB:
             time.sleep(0.001)
 
     def sounder(self, code):
+        ##print "sounder"
         for c in code:
             if c < -3000:
                 c = -500
@@ -108,17 +109,23 @@ class KOB:
                 self.setSounder(False)
 
     def setSounder(self, state):
+        ##print "set sounder"
         if state != self.sdrState:
+            ##print "state update"
             self.sdrState = state
             if state:
                 if self.port:
                     self.port.setRTS(True)
                 if self.audio:
                     audio.play(1)  # click
+                    ##print "click" 
+                    ##audio.play_click()  # click
             else:
                 if self.port:
                     self.port.setRTS(False)
                 if self.audio:
                     audio.play(0)  # clack
+                    ##print "clack" 
+                    ##audio.play_clack()  # clack
 
 ##windll.winmm.timeEndPeriod(1)
