@@ -1,0 +1,827 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>Morse KOB Users Guide</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+<style>
+<!--
+-->
+</style>
+</head>
+
+<body>
+
+<center>
+
+<table border="0" cellpadding="0" cellspacing="0" width="600">
+  <tr>
+    <td>
+      <h1>Morse KOB 1.3.2 Users Guide</h1>
+
+
+      <h2>Contents</h2>
+
+      <dl>
+        <dt style="text-indent: -18; margin-left: 36"><img border="1" src="images/bug.jpg" alt="Bug &amp; Laptop" align="right" width="300" height="200"><a href="#Introduction">Introduction</a></dt>
+        <dt style="text-indent: -18; margin-left: 36"><a href="#GettingStarted">Getting
+          started</a></dt>
+        <dt style="text-indent: -18; margin-left: 36"><a href="#CodePractice">Code
+          practice</a></dt>
+        <dt style="text-indent: -18; margin-left: 36"><a href="#HookingupKey">Hooking
+          up a key and sounder</a></dt>
+        <dt style="text-indent: -18; margin-left: 36"><a href="#CodeReader">Code
+          reader</a></dt>
+        <dt style="text-indent: -18; margin-left: 36"><a href="#InternetMorse">Internet
+          Morse</a></dt>
+        <dt style="text-indent: -18; margin-left: 36"><a href="#DialupMorse">Dial-up
+          Morse</a></dt>
+        <dt style="text-indent: -18; margin-left: 36"><a href="#AppendixA">Appendices</a></dt>
+        <dd style="text-indent: -18; margin-left: 54"><a href="#AppendixA">A:
+          Installing the program</a></dd>
+        <dd style="text-indent: -18; margin-left: 54"><a href="#AppendixB">B:
+          Keyboard commands</a></dd>
+        <dd style="text-indent: -18; margin-left: 54"><a href="#AppendixC">C:
+          Serial port</a></dd>
+        <dd style="text-indent: -18; margin-left: 54"><a href="#AppendixD">D:
+          Options</a></dd>
+        <dd style="text-indent: -18; margin-left: 54"><a href="#AppendixE">E:
+          Internet Morse</a></dd>
+        <dd style="text-indent: -18; margin-left: 54"><a href="#AppendixF">F:
+          Dial-up Morse</a></dd>
+      </dl>
+
+
+      <h2><a name="Introduction">Introduction</a></h2>
+
+      <p>KOB stands for &quot;key on base&quot; (or
+      &quot;key on board&quot;).&nbsp; Typically, a KOB
+      includes a key and a sounder and is used by students
+      for practicing Morse code — to get used to the feel
+      of the key and the sound of the sounder.&nbsp; A KOB
+      can also be pressed into service as a portable
+      instrument, since it's not screwed down permanently to
+      a desk.</p>
+
+      <p>I developed the Morse KOB program for much the same
+      purpose as the traditional KOB.&nbsp; It served me
+      well as a Morse practice set while I was learning the
+      code, and I use it regularly to communicate with other
+      operators over the Internet.</p>
+
+      <p>Morse KOB works with Windows 95 or later, including
+      Windows XP.&nbsp; The program includes the following
+      features:</p>
+
+      <ul>
+        <li>Simulates a sounder using the computer's
+          speakers</li>
+        <li>Can drive a sounder via the serial port
+          (requires a separate interface circuit)</li>
+        <li>Simulates a straight key or bug using the Ctrl
+          and Shift keys on the keyboard</li>
+        <li>Accepts a straight key or bug connected directly
+          to the serial port</li>
+        <li>Has a built-in keyer (automatic dots and manual
+          dashes) for use with a paddle</li>
+        <li>Sends American Morse from text typed on the
+          keyboard or copied from a file</li>
+        <li>Reads American Morse and displays the text</li>
+        <li>Compatible with CWCom and dial-up Morse</li>
+      </ul>
+
+
+      <h2><a name="GettingStarted">Getting started</a></h2>
+
+      <p>Once you've installed the program (see <a href="#AppendixA">Appendix
+      A</a>) try the following:</p>
+
+      <ul>
+        <li>Press the <b>Esc</b> key to toggle the buttons
+          in the <b>Circuit Closer</b> to the <b>Open</b>
+          position.&nbsp; This opens the KOB's circuit, and
+          you should hear the clack of the simulated sounder
+          deenergizing.</li>
+        <li>Press and release the <b>Shift</b> key.&nbsp;
+          You should hear a click and a clack from the
+          speakers.</li>
+        <li>Click on the <b>Options</b> tab, then pull down
+          the <b>Key</b> menu and select <b>Keyer</b>.&nbsp;
+          Press the <b>Ctrl</b> key.&nbsp; You should hear a
+          series of dots coming out of the speakers.</li>
+        <li>Click in the lower pane of the Morse KOB window
+          to place the cursor there.&nbsp; This is the text
+          box for the <b>code sender</b>.&nbsp; Type some
+          text and press the <b>space bar</b> or <b>Enter</b>
+          key.&nbsp; You should hear American Morse being
+          sent, and you should see the decoded text
+          appearing in the upper pane (the text box for the <b>code
+          reader</b>).</li>
+      </ul>
+
+
+      <h2><a name="CodePractice">Code practice</a></h2>
+
+      <p>If you're interested in learning American Morse, I
+      highly recommend The Mill program, available at <a href="http://home.comcast.net/~w4fok/" target="_blank">http://home.comcast.net/~w4fok/</a>.&nbsp;
+      For additional code practice, however, Morse KOB can
+      also be quite useful.</p>
+
+      <p>Open up a file on your computer (or an email
+      message, or a web page), select the text you're
+      interested in, copy it to the Windows <b>clipboard</b>,
+      and then paste it into the KOB's code sender window by
+      pressing the <b>Insert</b> key.&nbsp; Press the <b>Enter</b>
+      key when you're ready for the program to start sending
+      Morse.</p>
+
+      <p>The <b>Code Speed</b> setting determines the speed
+      in WPM of (a) the keyer, (b) the code sender, and (c)
+      the approximate speed expected by the code
+      reader.&nbsp; You can <b>reduce</b> the code speed by
+      pressing function key <b>F4</b>, and <b>increase</b>
+      it by pressing <b>F5</b>.&nbsp; (See <a href="#AppendixB">Appendix
+      B</a> for a complete list of the program's keyboard
+      commands.)</p>
+
+
+      <h2><a name="HookingupKey">Hooking up a key and
+      sounder</a></h2>
+
+      <p>Although you can use your computer's Shift key to
+      simulate a straight key – and even use the Ctrl and
+      Shift keys to simulate the paddle of a bug – at some
+      point you'll probably want to start using a real key
+      instead.&nbsp; You can do this by hooking up a
+      straight key, bug, or keyer paddle to your computer's
+      serial port.&nbsp; See <a href="#AppendixC">Appendix C</a>
+      for details on which pins to use.</p>
+
+      <p>You'll also need to tell the program which COM port
+      you're using.&nbsp; To do this, click on the Options
+      tab, then pull down the Serial menu and select your
+      COM port.&nbsp; If you're not sure which one it is,
+      try COM 1 or COM 2.</p>
+
+      <p>A sounder can also be connected to the serial port,
+      but this requires a bit more work.&nbsp; You'll need
+      an interface circuit such as the one described at <a href="http://www.mrx.com.au/images/Sounder%20CCT.jpg" target="_blank">www.mrx.com.au/images/Sounder%20CCT.jpg</a>.&nbsp;
+      The circuit can be built from parts available at Radio
+      Shack for about $5, and the components will fit inside
+      a DB9 serial port connector.</p>
+
+      <p align="center"><img border="1" src="images/sounderdriver.jpg" alt="Sounder Interface" width="480" height="320"><br>
+      Serial port connector with sounder interface circuit
+      inside</p>
+
+      <p>While we're on the subject of sounders, you can
+      change the sound of the simulated sounder.&nbsp; Go to
+      the <b>Options</b> tab, pull down the <b>Sounder</b>
+      menu, and select <b>Snappy</b> or <b>Mellow</b>.&nbsp;
+      Snappy has a crisp sound to it, while Mellow sounds
+      like the sounder's in a resonator – maybe with a
+      Prince Albert can behind it.&nbsp; If you're used to
+      CW, then the <b>Tone</b> option will sound more
+      familiar.&nbsp; The <b>Mixed</b> option provides a
+      combination of tone and sounder, to help you make the
+      transition to copying Morse by sounder alone.</p>
+
+
+      <h2><a name="CodeReader">Code reader</a></h2>
+
+      <p>Once you've got a key hooked up to your computer,
+      you can see how well the code reader copies your fist
+      when you're sending American Morse.&nbsp; The code
+      reader gives a rough indication of the quality of your
+      sending, but it sometimes misinterprets even well sent
+      code so don't get discouraged if you see it making
+      lots of errors.&nbsp; It does do an excellent job of
+      telling you if you've sent too many or too few dots,
+      however.</p>
+
+      <p>The code reader is kind of like training wheels:
+      useful while you're first learning, but unnecessary
+      once you get the hang of it.&nbsp; I still find it
+      nice to have while I'm on the wire, though, as a
+      &quot;second opinion&quot; when I'm not sure if I
+      copied something right.</p>
+
+      <p>When you're using the code reader, the program's
+      code speed should be set to roughly the same speed as
+      the Morse that it's trying to decode.&nbsp;
+      Unrecognized code is displayed within brackets (for
+      example <font face="Courier New"><nobr>[.-...]</nobr></font>
+      ).&nbsp; The circuit closure between transmissions is
+      represented by an underscore.
+    </td>
+  </tr>
+</table>
+
+<p><img border="0" src="images/screenshot132.gif" alt="Morse KOB Screenshot" width="600" height="450"></p>
+
+<table border="0" cellpadding="0" cellspacing="0" width="600">
+  <tr>
+    <td>
+      <dl>
+
+
+        <h2><a name="InternetMorse">Internet Morse</a></h2>
+
+        <p>Practicing Morse code by yourself can get boring
+        after a while.&nbsp; It's a lot more fun to use
+        Morse as it was originally intended: as a way of
+        communicating with other people.&nbsp; You can do
+        this either over the Internet or by using
+        &quot;dial-up Morse&quot;.</p>
+
+        <p>If your computer is connected to the Internet,
+        simply go to the <b>Internet</b> tab and click on
+        the <b>Connect</b> button.&nbsp; Within a fraction
+        of a second, the Connect indicator above the Connect
+        button should go from white to red, showing that
+        you've successfully connected to the Internet Morse
+        server.&nbsp; The server acts as a &quot;hub&quot;,
+        tying any number of offices together into a common
+        telegraph &quot;circuit&quot;.&nbsp; Make sure your
+        key is closed or the KOB's <b>Circuit Closer</b> is
+        in the <b>Closed</b> position; otherwise you'll
+        &quot;break&quot; the circuit as soon as you
+        connect.</p>
+
+        <p>If the Connect indicator flashes red and white
+        instead of showing a steady red, that means the
+        server isn't responding to your connect request for
+        some reason.</p>
+
+        <p>Once you've successfully connected to the server,
+        you can listen to other operators on the wire or you
+        can open your key and make a transmission, just as
+        if you were on a real telegraph wire.&nbsp; <b>Remember
+        to close your key</b> at the end of each
+        transmission, or press the <b>Esc</b> key to toggle
+        the <b>Circuit Closer</b> to the <b>Closed</b>
+        position.</p>
+
+        <blockquote>
+
+          <p>Note: If some other operator on the wire leaves
+          his key open (possibly because he's using CWCom
+          instead of Morse KOB), when you open your key and
+          try to send, your sounder will remain
+          silent.&nbsp; To regain control of the wire, press
+          the Esc key twice to cycle the Circuit Closer to
+          Closed then Open.</p>
+
+        </blockquote>
+
+        <p>Within 30 seconds after connecting, in the text
+        box to the left of the Connect button you'll see a
+        list of the user IDs for everyone connected to the
+        server.&nbsp; Whenever someone transmits, his ID is
+        moved to the bottom of the list.&nbsp; So the
+        station at the top of the list is the one that has
+        waited the longest since his last
+        transmission.&nbsp; A station's ID is not
+        automatically removed from the list after
+        disconnecting, but you can edit the list manually
+        using your mouse and keyboard.</p>
+
+        <p>When you're ready to end your session on the
+        Internet &quot;wire&quot;, simply click on the <b>Disconnect</b>
+        button.</p>
+
+        <p>For more Internet options, please see <a href="#AppendixE">Appendix
+        E</a>.</p>
+
+
+        <h2><a name="DialupMorse">Dial-up Morse</a></h2>
+
+        <p>Morse KOB allows you to use your computer's
+        built-in modem to do dial-up Morse.&nbsp; (See the <a href="http://members.tripod.com/morse_telegraph_club/" target="_blank">Morse
+        Telegraph Club</a>'s website for information on
+        dial-up Morse.)</p>
+
+        <p>In order to use the dial-up Morse feature, your
+        computer must have a V.253-compliant, full-duplex
+        voice modem (such as the Modem Blaster PCI modem,
+        available for $40 at Creative.com).&nbsp;
+        Furthermore, it uses the voice modem in a way that's
+        on the fringe of what it was designed to do.&nbsp;
+        Although it works well on my computer (a Dell
+        Dimension 4100 running Windows XP with a Creative
+        Modem Blaster modem), there's no guarantee it'll
+        work with yours.</p>
+
+        <p>If you'd like to try the dial-up modem feature,
+        be sure to read <a href="#AppendixF">Appendix F</a>
+        carefully, and contact me for additional help in
+        getting started.</p>
+
+      </dl>
+
+
+      <h2><a name="AppendixA">Appendix A</a>: Installing the
+      program</h2>
+
+      <p>Morse KOB can be downloaded from my Morse page at <a href="http://www.morsekob.org">www.morsekob.org</a>.&nbsp;
+      The basic steps are as follows:</p>
+
+      <ol>
+        <li>Create a temporary folder on your computer.</li>
+        <li>Save the download file in the temporary folder.</li>
+        <li>Expand the compressed download file into the
+          same temporary folder.</li>
+        <li>Run setup.exe and follow the on-screen
+          instructions.</li>
+        <li>Once the program has been installed, you can
+          delete the temporary folder.</li>
+      </ol>
+      <blockquote>
+
+        <p>Note: The installation process resets all of the
+        program's options to their default values.&nbsp; So
+        if you have previously changed any of the settings
+        in the Options tab, you should make a note of these
+        settings so you can restore them after the new
+        version is installed.</p>
+
+      </blockquote>
+
+      <p>To run the program, go to the Morse KOB program
+      folder from the Start menu and select Morse KOB.&nbsp;
+      The Morse KOB window should appear on the screen.</p>
+
+      <p>You can permanently remove the Morse KOB program
+      and its associated data files from your computer by
+      going to the Windows Control Panel and running the Add
+      or Remove Programs utility.</p>
+
+
+      <h2><a name="AppendixB">Appendix B</a>: Keyboard
+      commands</h2>
+
+      <div align="center">
+
+        <table border="0" cellpadding="5" cellspacing="0">
+          <tr>
+            <td valign="top" align="right">
+              <b>Key</b>
+            </td>
+            <td valign="top">
+            </td>
+            <td valign="top">
+              <b>Operation</b>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top" align="right">
+              Esc
+            </td>
+            <td valign="top">
+            </td>
+            <td valign="top">
+              Toggles the circuit closer
+            </td>
+          </tr>
+          <tr>
+            <td valign="top" align="right">
+              Ctrl
+            </td>
+            <td valign="top">
+            </td>
+            <td valign="top">
+              Sends dots
+            </td>
+          </tr>
+          <tr>
+            <td valign="top" align="right">
+              Shift
+            </td>
+            <td valign="top">
+            </td>
+            <td valign="top">
+              Sends dashes (manually)
+            </td>
+          </tr>
+          <tr>
+            <td valign="top" align="right">
+              F4
+            </td>
+            <td valign="top">
+            </td>
+            <td valign="top">
+              Decreases the code speed
+            </td>
+          </tr>
+          <tr>
+            <td valign="top" align="right">
+              F5
+            </td>
+            <td valign="top">
+            </td>
+            <td valign="top">
+              Increases the code speed
+            </td>
+          </tr>
+          <tr>
+            <td valign="top" align="right">
+              F10
+            </td>
+            <td valign="top">
+            </td>
+            <td valign="top">
+              Clears the ID list
+            </td>
+          </tr>
+          <tr>
+            <td valign="top" align="right">
+              F11
+            </td>
+            <td valign="top">
+            </td>
+            <td valign="top">
+              Clears the code reader window
+            </td>
+          </tr>
+          <tr>
+            <td valign="top" align="right">
+              F12
+            </td>
+            <td valign="top">
+            </td>
+            <td valign="top">
+              Clears the code sender window
+            </td>
+          </tr>
+          <tr>
+            <td valign="top" align="right">
+              Pause
+            </td>
+            <td valign="top">
+            </td>
+            <td valign="top">
+              Stops the code sender
+            </td>
+          </tr>
+          <tr>
+            <td valign="top" align="right">
+              Insert
+            </td>
+            <td valign="top">
+            </td>
+            <td valign="top">
+              Copies text from the clipboard<br>
+              to the code sender window
+            </td>
+          </tr>
+        </table>
+
+      </div>
+
+
+      <h2><a name="AppendixC">Appendix C</a>: Serial port</h2>
+
+      <p>The following table identifies the RS232 lines used
+      by the program to interface with an external key or
+      sounder.&nbsp; There doesn't seem to be any standard
+      color code for the wires in a serial cable, but the
+      table includes two schemes that you might encounter.</p>
+
+      <table border="0" cellpadding="5" cellspacing="0">
+        <tr>
+          <td valign="top">
+            <img border="0" src="images/warning.gif" width="40" height="36">
+          </td>
+          <td>
+            <b>Warning</b>: Connecting a key to a serial
+            port can expose your computer to possible damage
+            if you touch the key when your body is charged
+            with static electricity.&nbsp; Although
+            unlikely, <b>it has happened</b>, so take
+            appropriate precautions.&nbsp; For example,
+            using a USB-to-serial adapter cable instead of
+            connecting directly to the computer's serial
+            port can limit the extent of possible damage to
+            something that's easily replaced.<br>
+            &nbsp;
+          </td>
+        </tr>
+      </table>
+
+      <div align="center">
+
+        <table border="0" cellpadding="5" cellspacing="0">
+          <tr>
+            <td valign="bottom" style="font-weight: bold" align="center">
+              Function
+            </td>
+            <td valign="bottom" style="font-weight: bold" align="center">
+              RS232<br>
+              Line
+            </td>
+            <td valign="bottom" style="font-weight: bold" align="center">
+              DB9<br>
+              Pin
+            </td>
+            <td valign="bottom" style="font-weight: bold" align="center">
+              DB25<br>
+              Pin
+            </td>
+            <td valign="bottom" style="font-weight: bold" align="center">
+              &nbsp;Color<br>
+              Code A
+            </td>
+            <td valign="bottom" style="font-weight: bold" align="center">
+              Color<br>
+              Code B
+            </td>
+          </tr>
+          <tr>
+            <td align="center" valign="middle">
+              Manual key or<br>
+              paddle common
+            </td>
+            <td align="center" valign="middle">
+              DTR*
+            </td>
+            <td align="center" valign="middle">
+              4
+            </td>
+            <td align="center" valign="middle">
+              20
+            </td>
+            <td align="center" valign="middle">
+              Orange
+            </td>
+            <td align="center" valign="middle">
+              Yellow
+            </td>
+          </tr>
+          <tr>
+            <td align="center" valign="middle">
+              Manual key or<br>
+              dot paddle
+            </td>
+            <td align="center" valign="middle">
+              DSR
+            </td>
+            <td align="center" valign="middle">
+              6
+            </td>
+            <td align="center" valign="middle">
+              6
+            </td>
+            <td align="center" valign="middle">
+              Green
+            </td>
+            <td align="center" valign="middle">
+              Blue
+            </td>
+          </tr>
+          <tr>
+            <td align="center" valign="middle">
+              Dash paddle
+            </td>
+            <td align="center" valign="middle">
+              CTS
+            </td>
+            <td align="center" valign="middle">
+              8
+            </td>
+            <td align="center" valign="middle">
+              5
+            </td>
+            <td align="center" valign="middle">
+              Violet
+            </td>
+            <td align="center" valign="middle">
+              Gray
+            </td>
+          </tr>
+          <tr>
+            <td align="center" valign="middle">
+              Sounder<br>
+              output
+            </td>
+            <td align="center" valign="middle">
+              RTS*
+            </td>
+            <td align="center" valign="middle">
+              7
+            </td>
+            <td align="center" valign="middle">
+              4
+            </td>
+            <td align="center" valign="middle">
+              Blue
+            </td>
+            <td align="center" valign="middle">
+              Violet
+            </td>
+          </tr>
+          <tr>
+            <td align="center" valign="middle">
+              Sounder<br>
+              ground
+            </td>
+            <td align="center" valign="middle">
+              SG
+            </td>
+            <td align="center" valign="middle">
+              5
+            </td>
+            <td align="center" valign="middle">
+              7
+            </td>
+            <td align="center" valign="middle">
+              Yellow
+            </td>
+            <td align="center" valign="middle">
+              Green
+            </td>
+          </tr>
+        </table>
+
+      </div>
+      <blockquote>
+
+        <p>*The functions of the DTR and RTS lines are
+        interchanged when the External Sounder option is set
+        to Alternate (see <a href="#AppendixD">Appendix D</a>).<br>
+        </p>
+
+      </blockquote>
+
+      <p>If your computer has a 9-pin serial port connector,
+      then you can connect a <b>straight key</b> or <b>bug</b>
+      to <b>pins 4</b> and <b>6</b>.&nbsp; Be sure to set
+      the <b>Key</b> option on the <b>Options</b> tab to <b>Manual</b>.</p>
+
+      <p>A <b>keyer paddle</b> can be connected to <b>pins 4</b>,
+      <b>6</b>, and <b>8</b>.&nbsp; Set the <b>Key</b>
+      option on the <b>Options</b> tab to <b>Keyer</b>.</p>
+
+      <p>The dot paddle (normally the left paddle) sends
+      dots automatically at whatever speed you specify in
+      the <b>Code Speed</b> setting, while the dash paddle
+      is used for sending dashes manually.&nbsp; This allows
+      you to use a keyer paddle (either &quot;iambic&quot;
+      or single lever) to simulate a traditional bug, giving
+      you a way to send longer dashes for L and Ø.</p>
+
+
+      <h2><a name="AppendixD">Appendix D</a>: Options</h2>
+
+      <p align="center"><img border="0" src="images/options.gif" width="350" height="120"></p>
+
+      <p>By going to the Options tab, you can set the
+      following parameters.</p>
+
+      <dl>
+        <dt>Key</dt>
+        <dd><i>Keyer</i>: paddle (&quot;iambic&quot; or
+          single lever)<br>
+          <i>Manual</i>: straight key or bug</dd>
+        <dt>Keyboard</dt>
+        <dd><i>Immediate</i>: sends Morse for each character
+          as soon as it is typed into the send window<br>
+          <i>Send on Space</i>: starts sending whenever you
+          press the space bar, and only sends up to that
+          point; this causes each word to be sent at full
+          speed, even if your typing is slow, and it also
+          allows you to correct errors in the current word<br>
+          <i>Send on Enter</i>: similar to Send on Space,
+          except sending is line-by-line instead of
+          word-by-word</dd>
+        <dt>External Sounder</dt>
+        <dd><i>None</i>: external sounder disabled<br>
+          <i>External</i>: external sounder uses RTS line<br>
+          <i>Alternate</i>: external sounder uses DTR line</dd>
+        <dt>Internal Sounder</dt>
+        <dd><i>None</i>: simulated sounder disabled<br>
+          <i>Mellow</i>: simulates a sounder enclosed in a
+          resonator<br>
+          <i>Snappy</i>: simulates a crisp sounder</dd>
+        <dd><i>Tone</i>: produces CW tone instead of sounder
+          clicks<br>
+          <i>Mixed</i>: combined tone and simulated sounder</dd>
+        <dt>Serial Port</dt>
+        <dd>Sets the COM port for the serial port used to
+          connect a key and/or sounder</dd>
+        <dt>Modem Port</dt>
+        <dd>Sets the COM port for the voice modem used for
+          dial-up Morse</dd>
+      </dl>
+
+
+      <h2><a name="AppendixE">Appendix E</a>: Internet Morse</h2>
+
+      <p>Morse KOB allows you to connect with other Morse
+      operators via the Internet, using the same method as
+      MRX Software's <a href="http://www.mrx.com.au/" target="_blank">CWCom</a>
+      system.&nbsp; If you simply click on the <b>Connect</b>
+      button on the <b>Internet</b> tab, you'll be connected
+      to the default MTC server at mtc-kob.dyndns.org, using
+      channel 1005 (the channel used for the regular MTC
+      net), with a default ID of &quot;KOB&quot;.&nbsp; The
+      server acts like a &quot;hub&quot;, tying many users
+      together on a telegraph &quot;circuit&quot;.</p>
+
+      <p>The first thing you'll probably want to do is click
+      on the <b>Server</b> tab and change the <b>ID</b>
+      field to match your own office call.</p>
+
+      <p align="center"><img border="0" src="images/server.gif" width="350" height="120"></p>
+
+      <p>The server allows you to tie into any of more than
+      60,000 independent circuits, known as <b>Channels</b>.&nbsp;
+      Using the Server tab, you can switch to a different
+      channel if you wish.</p>
+
+      <p>You can also choose a different server.&nbsp;
+      However, please<b> do not use</b> the CWCom server at <b>morsecode.dyndns.org</b>
+      at this time.&nbsp; Morse KOB has not been certified
+      for use on this server yet.</p>
+
+
+      <h2><a name="AppendixF">Appendix F</a>: Dial-up Morse</h2>
+
+      <p align="center"><img border="0" src="images/dialup.gif" width="350" height="120"></p>
+
+      <p>The controls on the <b>Dial-Up</b> tab set the
+      modem to <b>Originate</b> or <b>Answer</b> mode and <b>Connect</b>
+      the modem to the phone line.</p>
+
+      <p>A <b>signal indicator</b> provides a graphical
+      display of the last half second of the received signal
+      when the modem is connected, giving an indication of
+      the quality of the connection.</p>
+
+      <p>The <b>connect indicator </b>above the <b>Connect</b>
+      button shows the status of the connection using the
+      following color code:</p>
+
+      <div align="center">
+
+        <table border="0" cellpadding="5" cellspacing="0">
+          <tr>
+            <td align="right" valign="top">
+              <b><font color="#999999">White</font></b>
+            </td>
+            <td valign="top">
+              Disconnected
+            </td>
+          </tr>
+          <tr>
+            <td align="right" valign="top">
+              <b>Black</b>
+            </td>
+            <td valign="top">
+              Connecting
+            </td>
+          </tr>
+          <tr>
+            <td align="right" valign="top">
+              <b><font color="#CCCC00">Yellow</font></b>
+            </td>
+            <td valign="top">
+              Synchronizing
+            </td>
+          </tr>
+          <tr>
+            <td align="right" valign="top">
+              <b><font color="#FF0000">Red</font></b>
+            </td>
+            <td valign="top">
+              Connected
+            </td>
+          </tr>
+        </table>
+
+      </div>
+
+      <p>To establish a dial-up connection, dial the number
+      using your telephone and click on the <b>Connect</b>
+      button.&nbsp; Within five to ten seconds after
+      clicking the Connect button, the connect indicator
+      should turn red, indicating that the modem is properly
+      connected to the phone line.&nbsp; At this point, you
+      can hang up the telephone.</p>
+
+      <p>To <b>disconnect</b>, click the <b>Connect</b>
+      button again.</p>
+
+      <p align="right"><font size="1">Revised 2006-10-30<br>
+      <a href="index.htm">Morse KOB Home Page</a></font></p>
+
+    </td>
+  </tr>
+</table>
+
+</center>
+
+</body>
+
+</html>

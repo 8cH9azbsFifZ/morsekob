@@ -1,0 +1,424 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>MorseKOB Tutorial</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+<style>div.fig-center img, div.fig-float img { border: 1px solid black }
+</style>
+</head>
+
+<body>
+
+<h1>MorseKOB 2.5 Tutorial:<br>
+A Guided Tour of the Program</h1>
+<h2>Contents</h2>
+<div class="contents">
+  <img border="0" src="images/kob.jpg" alt="KOB" align="right" hspace="30" width="300" height="200">
+  <p><a href="#Introduction">Introduction</a></p>
+  <p><a href="#GettingStarted">Getting started</a></p>
+  <p><a href="#CodeSender">The code sender</a></p>
+  <p><a href="#Key">Hooking up a key</a></p>
+  <p><a href="#CodeReader">The code reader</a></p>
+  <p><a href="#InternetMorse">Internet Morse</a></p>
+  <p><a href="#AppendixA">Appendices</a><br>
+  &nbsp;&nbsp;&nbsp;&nbsp; <a href="#AppendixA"><b>A: Keyboard commands</b></a><br>
+  &nbsp;&nbsp;&nbsp;&nbsp; <a href="#AppendixB"><b>B: Serial port</b></a><br>
+  &nbsp;&nbsp;&nbsp;&nbsp; <a href="#AppendixC"><b>C: USB adapters</b></a><br>
+  &nbsp;&nbsp;&nbsp;&nbsp; <a href="#AppendixD"><b>D: Sounder driver</b></a></p>
+</div>
+<h2><a name="Introduction">Introduction</a></h2>
+<p>KOB stands for “key on board” or “key on base”.&nbsp; A KOB includes
+a key and sounder and is typically used by students for practicing Morse code—to
+get used to the feel of the key and the sound of the sounder. A KOB can also
+serve as a portable instrument, since it’s not permanently fastened to a desk.</p>
+<p>I developed the MorseKOB program for much the same purpose as the traditional
+KOB. It served me well as a Morse practice set while I was learning the code,
+and I use it regularly to communicate with other operators over the internet.</p>
+<p>MorseKOB works with Windows 98 or later. The program includes the following
+features:</p>
+<ul>
+  <li>Simulates a sounder using the computer’s speakers</li>
+  <li>Can drive a sounder via the serial port (requires a separate interface
+    circuit)</li>
+  <li>Simulates a straight key or bug using the left and right arrow keys on the
+    keyboard</li>
+  <li>Accepts a straight key or bug connected directly to the serial port</li>
+  <li>Has a built-in keyer (automatic dots and manual dashes) for use with
+    paddles</li>
+  <li>Sends American Morse from text typed on the keyboard or from a file</li>
+  <li>Reads American Morse and displays the decoded text</li>
+</ul>
+<h2><a name="GettingStarted">Getting started</a></h2>
+<p>Once you’ve installed the program and have it up and running, try the
+following:</p>
+<ul>
+  <li>Press the <b>Escape</b> key to toggle the <b>Circuit Closer</b> to the
+    closed position. This closes the KOB’s circuit, and you should hear the
+    down-stroke click of the simulated sounder.</li>
+  <li>Press the <b>Escape</b> key again to open the Circuit Closer. The
+    simulated sounder releases with a slightly different up-stroke click sound.</li>
+  <li>Press and release the <b>Right Arrow</b> key. You should hear two clicks
+    from the speakers.&nbsp; The right arrow key can be used as a simulated
+    straight key.</li>
+  <li>Press the <b>Left Arrow</b> key and hold it down briefly. You should hear
+    a series of dots coming out of the speakers. With practice (although I can’t
+    recommend it) the left arrow key can be used in conjunction with the right
+    arrow key as a simulated bug.</li>
+  <li>Click in the lower left text box of the MorseKOB window to place the
+    cursor there. This is the <b>code sender</b> window. Make sure the Code
+    Sender On checkbox is checked, and type some text on the keyboard.&nbsp; You
+    should hear American Morse being sent, and you should see the decoded text
+    appear in the upper left text box—the <b>code reader</b> window.</li>
+</ul>
+<blockquote>
+  <p>Note: if you press a key and the program doesn't do anything, make sure the
+  KOB window is active. In other words, the KOB window's title bar must be
+  highlighted in order for it to recognize any keyboard input. To activate the
+  KOB window, click the left mouse button on the window's title bar.</p>
+</blockquote>
+<div class="fig-center">
+  <p><img border="0" src="images/screenshot.gif" alt="Morse KOB Screenshot" width="600" height="450"></p>
+</div>
+<h2><a name="CodeSender">The code sender</a></h2>
+<p>Go to the <b>File</b> menu and select <b>Open</b>. A file browser window
+appears on the screen, allowing you to select any text file on your computer.
+For now, choose <i>The quick brown fox</i> from the default folder. The text of
+the file appears in the code sender window. Note that the <b>Code Sender</b> is
+set to <b>Off</b>.</p>
+<p>Press the <b>Pause</b> key to toggle the <b>Code Sender</b> to <b>On</b>. The
+code sender starts sending the text in Morse, starting from the current cursor
+position: in this case, the beginning of the file.</p>
+<p>When the code sender reaches the end of the file, the code sender is still
+active. If you type on the keyboard, the text will be added to the end of the
+code sender window (because that’s where the cursor is) and it will be sent
+immediately. Try it.</p>
+<p>Press the <b>Pause</b> key to toggle the <b>Code Sender</b> to <b>Off</b>.
+Press the <b>Home</b> key to return the cursor to the <i>beginning</i> of the
+code sender window. (Similarly, the <b>End</b> key can be used to send the
+cursor to the <i>end</i> of the code sender window.)</p>
+<p>The <b>Code Speed</b> setting determines the speed in WPM of (a) the keyer,
+(b) the code sender, and (c) the approximate speed expected by the code reader.
+You can <b>reduce</b> the code speed by pressing function key <b>F4</b>, and <b>increase</b>
+it by pressing <b>F5</b>. (See <a href="#AppendixA">Appendix A</a> for a
+complete list of the program’s keyboard commands.)</p>
+<p>Press F4 five times to reduce the code speed from 25 WPM to 20 WPM, and then
+press the Pause key to play the file again at the new speed.</p>
+<p>You can pause and restart the code sender by pressing the Pause key, and you
+can restart from a new point by clicking on the mouse to reposition the cursor.</p>
+<p>Another way of sending code is to copy text from some other application (a
+web browser or email program, for example) to the Windows <b>clipboard</b>, and
+then paste the contents of the clipboard into the KOB program’s code sender
+window by pressing the <b>Insert</b> key. Press the <b>Pause</b> key when you’re
+ready for the program to start sending the text as Morse.</p>
+<h2><a name="Key">Hooking up a key</a></h2>
+<p><img src="images/bug.jpg" alt="Key" width="270" height="180" hspace="10" align="right">Although
+you can use your computer’s right arrow key to simulate a straight key—and
+even use the left and right arrow keys to simulate the paddle of a bug—at some
+point you’ll probably want to start using a real key instead. You can do this
+by hooking up a straight key, bug, or keyer paddle to your computer’s serial
+port.<br clear="all">
+</p>
+<table border="0" cellpadding="5" cellspacing="0">
+  <tr>
+    <td valign="top"><img border="0" src="images/warning.gif" width="40" height="36"></td>
+    <td><b>Warning</b>: Connecting a key directly to a serial port can expose
+      your computer to possible damage if you touch the key when your body is
+      charged with static electricity. Although unlikely, <b>it has happened</b>,
+      so take appropriate precautions. For example, using a USB-to-serial
+      adapter cable instead of connecting directly to the computer’s serial
+      port can limit the extent of possible damage.</td>
+  </tr>
+</table>
+<p>The easiest way to connect a key is to take a serial cable with a female DB9
+connector on one end and simply cut off the connector at the other end. You can
+buy a Belkin F2N209-06-T serial extension cable for $5 or less at <a href="http://compusa.com" target="_blank">CompUSA.com</a>
+or <a href="http://buy.com" target="_blank">Buy.com</a>. See <a href="#AppendixB">Appendix
+B</a> for details on which connector pins to use.</p>
+<p>But what if your computer doesn’t have a serial port? The simplest solution
+is to buy a USB-to-serial adapter. The Cables To Go model 26886 adapter cable is
+available for about $15 at <a href="http://compusa.com" target="_blank">CompUSA.com</a>,
+<a href="http://buy.com" target="_blank">Buy.com</a>., or (in Canada) <a href="http://TigerDirect.ca" target="_blank">TigerDirect.ca</a>.
+See <a href="#AppendixC">Appendix C</a> for a discussion of USB adapters. As
+mentioned in the above warning, using a USB adapter may be a good idea anyway,
+even if your computer does have a serial port.</p>
+<div class="fig-center">
+  <p><img src="images/usbadapter.jpg" width="480" height="260"><br>
+  Serial cable and USB adapter for connecting a key</p>
+</div>
+<p>Once you’ve connected a key to your computer, you’ll also need to tell
+the program which COM port you’re using. To do this, go to the Tools menu and
+select Preferences, then pull down the Port menu and select your COM port.</p>
+<p>For the ultimate in realism, nothing beats having an actual sounder connected
+to the serial port, but this is a bit more difficult than just hooking up a key.
+You’ll need an interface circuit such as the one described in <a href="#AppendixD">Appendix
+D</a>.</p>
+<p>While we’re on the subject of sounders, you can change the sound of the
+simulated sounder.&nbsp; Go to the Tools menu and select Preferences, then pull
+down the Sound menu and select one of the alternate sounders. If you’re used
+to CW, then the Tone option will sound more familiar at first. The Mixed option
+provides a combination of tone and sounder, to help you make the transition to
+copying Morse by sounder alone.</p>
+<h2><a name="CodeReader">The code reader</a></h2>
+<p>Once you have a key hooked up to your computer, you can see how well the code
+reader copies your fist while you’re sending American Morse. The code reader
+gives a rough indication of the quality of your sending, but it sometimes
+misinterprets even well sent code, so don’t get discouraged if you see it
+making lots of errors. It does do an excellent job of telling if you’ve sent
+too many or too few dots, however.</p>
+<p>The code reader is kind of like training wheels: useful while you’re first
+learning, but unnecessary once you get the hang of it. However, I still find it
+nice to have while I’m on the wire—as a “second opinion” when I’m not
+sure if I copied something right or to “take notes” if I’m called away
+momentarily.</p>
+<p>When you’re using the code reader, the program’s code speed should be set
+to roughly the same speed as the Morse that it’s trying to decode.
+Unrecognized code is displayed within brackets (for example <font face="Courier New"><nobr>[.-..-]</nobr></font>
+). The circuit closure between transmissions is represented by an underscore.</p>
+<h2><a name="InternetMorse">Internet Morse</a></h2>
+<p>Practicing Morse code by yourself can get boring after a while. It’s a lot
+more fun to use Morse as it was originally intended: as a way of communicating
+with other people.&nbsp; Using the KOB program, you can do this over the
+internet.</p>
+<p>Before you start, you should enter your <b>name</b>, and optionally your <b>office
+call</b> and <b>location</b>, into the small text box just above the Circuit
+Closer control. This is your ID, and it’s how you’ll be identified to other
+operators on the wire.</p>
+<p>Once your computer is connected to the internet—via a dialup, broadband, or
+wireless internet connection—simply click on the <b>Connect</b> button. Within
+a second or two, the connection indicator above the Connect button should go
+from white to red, showing that you’ve successfully connected to the KOB
+server. The server acts as a “hub”, tying together any number of offices
+into a common telegraph circuit.</p>
+<p>If the connection indicator flashes red and white instead of showing a steady
+red, that means the server isn’t responding to your connect request for some
+reason.</p>
+<p>The number above the Connect button designates the <b>wire number</b> that
+you’re connected to.&nbsp; You can enter any wire number from 1 to 32000,
+where each “wire” is the equivalent of a different telegraph circuit. The
+No. 1 wire is most commonly used.</p>
+<p>Within 10 seconds after connecting, in the text box in the upper right part
+of the KOB window you’ll see a list of the IDs for everyone connected to the
+same wire that you’re on. Whenever someone transmits, his ID is moved to the
+bottom of the list, so the station at the top of the list is the one that has
+waited the longest since his last transmission. About 60 seconds after a user
+disconnects from the wire, his ID is removed from the list.</p>
+<p>Once you’ve successfully connected to the wire, you can listen to other
+operators or you can open your key and make a transmission, just as if you were
+on a real telegraph circuit.&nbsp; <b>Remember to close your key</b> at the end
+of each transmission, or press the Escape key to toggle the Circuit Closer to
+the closed position.</p>
+<blockquote>
+  <p>Note: If some other operator on the wire leaves his key open, when you open
+  your key and try to send, your sounder will remain silent. To regain control
+  of the wire, press the Escape key twice to cycle the KOB Circuit Closer closed
+  and then open again.</p>
+</blockquote>
+<p>When you’re ready to end your session on the internet “wire”, simply
+click on the <b>Connect</b> button again to <b>disconnect</b> from the server.
+The connection indicator changes from red to white.</p>
+<h2><a name="AppendixA">Appendix A</a>: Keyboard commands</h2>
+<div align="center">
+  <table border="0" cellpadding="5" cellspacing="0" width="95%">
+    <tr>
+      <td valign="bottom" align="right"><b>Key</b></td>
+      <td></td>
+      <td valign="bottom" align="left"><b>Operation</b></td>
+    </tr>
+    <tr>
+      <td valign="top" align="right">Escape</td>
+      <td></td>
+      <td valign="top" align="left">Toggles the circuit closer open and closed</td>
+    </tr>
+    <tr>
+      <td valign="top" align="right">Pause</td>
+      <td></td>
+      <td valign="top" align="left">Starts and stops the code sender</td>
+    </tr>
+    <tr>
+      <td valign="top" align="right">Insert</td>
+      <td></td>
+      <td valign="top" align="left">Copies text from the clipboard to the code
+        sender window</td>
+    </tr>
+    <tr>
+      <td valign="top" align="right">Home</td>
+      <td></td>
+      <td valign="top" align="left">Moves the cursor to the beginning of the
+        code sender window</td>
+    </tr>
+    <tr>
+      <td valign="top" align="right">End</td>
+      <td></td>
+      <td valign="top" align="left">Moves the cursor to the end of the code
+        sender window</td>
+    </tr>
+    <tr>
+      <td valign="top" align="right">Left arrow</td>
+      <td></td>
+      <td valign="top" align="left">Sends dots</td>
+    </tr>
+    <tr>
+      <td valign="top" align="right">Right arrow</td>
+      <td></td>
+      <td valign="top" align="left">Sends dashes (manually)</td>
+    </tr>
+    <tr>
+      <td valign="top" align="right">F4</td>
+      <td></td>
+      <td valign="top" align="left">Decreases the code speed</td>
+    </tr>
+    <tr>
+      <td valign="top" align="right">F5</td>
+      <td></td>
+      <td valign="top" align="left">Increases the code speed</td>
+    </tr>
+    <tr>
+      <td valign="top" align="right">F11</td>
+      <td></td>
+      <td valign="top" align="left">Clears the code reader window</td>
+    </tr>
+    <tr>
+      <td valign="top" align="right">F12</td>
+      <td></td>
+      <td valign="top" align="left">Clears the code sender window</td>
+    </tr>
+  </table>
+</div>
+<h2><a name="AppendixB">Appendix B</a>: Serial port</h2>
+<p>The following table identifies the RS232 lines used by the program to
+interface with an external key or sounder.</p>
+<div align="center">
+  <table border="0" cellpadding="5" cellspacing="0">
+    <tr>
+      <td valign="bottom" style="font-weight: bold" align="center">Function</td>
+      <td valign="bottom" style="font-weight: bold" align="center">RS232<br>
+        Line</td>
+      <td valign="bottom" style="font-weight: bold" align="center">DB9<br>
+        Pin</td>
+      <td valign="bottom" style="font-weight: bold" align="center">&nbsp;Color*</td>
+    </tr>
+    <tr>
+      <td align="center" valign="top">Manual key or<br>
+        paddle common</td>
+      <td align="center" valign="top">DTR</td>
+      <td align="center" valign="top">4</td>
+      <td align="center" valign="top">Orange</td>
+    </tr>
+    <tr>
+      <td align="center" valign="top">Manual key or<br>
+        dot paddle</td>
+      <td align="center" valign="top">DSR</td>
+      <td align="center" valign="top">6</td>
+      <td align="center" valign="top">Green</td>
+    </tr>
+    <tr>
+      <td align="center" valign="top">Dash paddle</td>
+      <td align="center" valign="top">CTS</td>
+      <td align="center" valign="top">8</td>
+      <td align="center" valign="top">Violet</td>
+    </tr>
+    <tr>
+      <td align="center" valign="top">Sounder<br>
+        output</td>
+      <td align="center" valign="top">RTS</td>
+      <td align="center" valign="top">7</td>
+      <td align="center" valign="top">Blue</td>
+    </tr>
+    <tr>
+      <td align="center" valign="top">Sounder<br>
+        ground</td>
+      <td align="center" valign="top">SG</td>
+      <td align="center" valign="top">5</td>
+      <td align="center" valign="top">Yellow</td>
+    </tr>
+  </table>
+</div>
+<blockquote>
+  <p>*The color code shown is for the Belkin model F2N209-06-T serial extension
+  cable. Some other cables follow the same color code, some do not.</p>
+</blockquote>
+<p>If your computer has a 9-pin serial port connector, then you can connect a <b>straight
+key</b> or <b>bug</b> to <b>pins 4</b> and <b>6</b>. Be sure to set the <b>Mode</b>
+option in the <b>Preferences</b> window to <b>Normal</b>.</p>
+<p><b>Keyer paddles</b> can be connected to <b>pins 4</b>, <b>6</b>, and <b>8</b>.
+Set the <b>Mode</b> option in the <b>Preferences</b> window to <b>Keyer</b>.</p>
+<p>The dot paddle (normally the left paddle) sends dots automatically at
+whatever speed you specify in the <b>Code Speed</b> setting, while the dash
+paddle is used for sending dashes manually. This allows you to use a keyer
+paddle (either “iambic” or single lever) to simulate a traditional bug,
+giving you a way to send longer dashes for L and zero.</p>
+<h2><a name="AppendixC">Appendix C</a>: USB adapters</h2>
+<p>USB-to-serial adapter cables have a reputation for being “quirky”, and
+that’s been my experience too. The KOB program requires good performance on
+the RS232 control lines (specifically, DSR, DTS, and RTS), whereas it doesn’t
+use the serial data lines at all. Consequently, a product that performs well for
+general applications may not be suitable for use with the KOB program.</p>
+<p>I’ve had good luck with two adapter products. My favorite is the 13-inch
+Port Authority USB Serial DB9 Adapter Cable, made by <b>Cables To Go</b>
+(product #26886). I like it because it’s economical, compact, and convenient.</p>
+<p>Another product that has worked well for me is the <b>Radio Shack</b>
+USB-to-Serial Port Cable (catalog #26-183). It’s more expensive than the
+Cables to Go model and it’s a bit bulkier, but it does have the potential
+advantage of being readily available at local Radio Shack stores.</p>
+<p>If you have a desktop computer with no serial port, an alternative to the USB
+adapter is to install a serial port card in one of the computer’s spare PCI
+slots. I bought a <b>StarTech</b> 2 Port 16550 Serial PCI Card, model number
+PCI2S550. It took just a few minutes to open my computer, plug in the new card,
+and install the device driver software. With its dual ports it has the advantage
+that you can have two keys and/or sounders connected simultaneously, which is
+handy for using the program on two separate KOB wires to simulate a multiline
+telegraph office.</p>
+<h2><a name="AppendixD">Appendix D</a>: Sounder driver</h2>
+<p>In order to drive an external sounder from the serial port, you’ll need an
+interface circuit like the one shown below. The circuit can be built from parts
+available at Radio Shack for about $6. The components can even be made to fit
+inside a DB9 serial port connector, although you may prefer to build it in a
+project box.</p>
+<p align="center"><img border="0" src="images/sounderdriver.gif" alt="Sounder Driver" width="528" height="192"></p>
+<div align="center">
+  <table border="0" cellspacing="0">
+    <tr>
+      <td valign="bottom" align="center">
+        <p align="center"><b>Parts List</b></td>
+      <td align="center" valign="bottom"><b>RS Catalog #</b></td>
+    </tr>
+    <tr>
+      <td valign="top" align="left">TIP120 NPN Darlington transistor</td>
+      <td align="center" valign="top">276-2068</td>
+    </tr>
+    <tr>
+      <td valign="top" align="left">10 Kohm 1/4 watt resistor</td>
+      <td align="center" valign="top">271-1335</td>
+    </tr>
+    <tr>
+      <td valign="top" align="left">1N914/4148 diode</td>
+      <td align="center" valign="top">276-1122</td>
+    </tr>
+    <tr>
+      <td valign="top" align="left">1N4005 micro 1 amp diode</td>
+      <td align="center" valign="top">276-1104</td>
+    </tr>
+    <tr>
+      <td valign="top" align="left">9-pin D-sub female connector</td>
+      <td align="center" valign="top">276-1538</td>
+    </tr>
+    <tr>
+      <td valign="top" align="left">D-sub connector hood</td>
+      <td align="center" valign="top">276-1539</td>
+    </tr>
+  </table>
+</div>
+<p align="center">&nbsp;</p>
+<div class="fig-center">
+  <p><img src="images/sounderdriver.jpg" alt="Sounder Interface" width="450" height="300" vspace="2"><br>
+  Serial port connector with sounder interface circuit inside</p>
+</div>
+<p align="right"><font size="1">Revised 2011-12-17<br>
+<a href="../index.htm">MorseKOB Home Page</a></font></p>
+
+</body>

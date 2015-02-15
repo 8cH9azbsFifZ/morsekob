@@ -1,0 +1,299 @@
+Signature-Version: 1.0
+SHA1-Digest-Manifest-Main-Attributes: P8ghemlgEWfqKZ4OPyRKO4eIJMg=
+Created-By: 1.6.0_20 (Sun Microsystems Inc.)
+SHA1-Digest-Manifest: 5Gat1yUHtVfgUyde6AIyPwD4YNE=
+
+Name: morsekob/Options$8.class
+SHA1-Digest: TQffIZuVrJNDG5bDikQgNcCl5gw=
+
+Name: morsekob/Controls$5.class
+SHA1-Digest: Y+6+iS3nQFL+V0myN2cag+a0m4Q=
+
+Name: morsekob/Controls$14.class
+SHA1-Digest: 9WdSqL1RRlrdxrvq6jT8u/yERIw=
+
+Name: morsekob/Port.class
+SHA1-Digest: vUx0GQLUwW7v14+T7tsj94niXSU=
+
+Name: gnu/io/I2C.class
+SHA1-Digest: EJ8tcweQzf3khaiZ0TVlKrWoAbo=
+
+Name: gnu/io/Configure$2.class
+SHA1-Digest: Puu8rRsIqj/0QIx2guhiFCFjlEM=
+
+Name: morsekob/Controls$7.class
+SHA1-Digest: +1DHcv9/BTDOD2oKLH6CU3LLyG8=
+
+Name: gnu/io/RXTXCommDriver.class
+SHA1-Digest: 2BEiw4qNMVDZYUOdnk4tlNemtTs=
+
+Name: morsekob/Controls$8.class
+SHA1-Digest: LDEEqOmm2FXvchmdsBvBHvAMI7U=
+
+Name: gnu/io/Configure$4.class
+SHA1-Digest: 5o0paeFxGxvgqHVdb9LgotL2Ndg=
+
+Name: gnu/io/NoSuchPortException.class
+SHA1-Digest: EJC4lSRvk7/Q/c/B2Qa4sUjmHZw=
+
+Name: gnu/io/I2CPortEvent.class
+SHA1-Digest: AZAXDwkvcEVPPouNNb3iUOlKcsE=
+
+Name: morsekob/Controls$3.class
+SHA1-Digest: NIsrlCPVWj7jzEedZ5eOeIuylyk=
+
+Name: morsekob/Controls$4.class
+SHA1-Digest: R7UwI6EFQtEizvC77pc3lsLM3H0=
+
+Name: gnu/io/RXTXPort$MonitorThread.class
+SHA1-Digest: XkzK5uYWWjRddtGtsxrQu8LmBcg=
+
+Name: morsekob/Controls$9.class
+SHA1-Digest: bIpbRDRsNbjS64okufsgj67jnzE=
+
+Name: gnu/io/Raw.class
+SHA1-Digest: MLutZjsENBw3sj8PboeseV0ZXSk=
+
+Name: morsekob/Options$9.class
+SHA1-Digest: ajwXFuU4U0iYvCqWN5afTemGAd4=
+
+Name: gnu/io/SerialPortEvent.class
+SHA1-Digest: lrfyN3ogMGDWXXNsIH+4bNlYowI=
+
+Name: gnu/io/Raw$MonitorThread.class
+SHA1-Digest: q2rQzQlDVsfg5YsgVZQesc9iJJs=
+
+Name: morsekob/Sounder$LineListenerImpl.class
+SHA1-Digest: QDdwGzyKYXZU9ZeNK76Bjn4EYbc=
+
+Name: gnu/io/I2C$MonitorThread.class
+SHA1-Digest: QLqfRqUs+zRxobobSgEUl0MLPEo=
+
+Name: gnu/io/I2CPort.class
+SHA1-Digest: yRQLubiA8ZnQYTy80Urh4GIDBAI=
+
+Name: gnu/io/I2CPortEventListener.class
+SHA1-Digest: 7TR8+6wlxo7Mcyj6k6qxzOlt1Ik=
+
+Name: morsekob/Controls$2.class
+SHA1-Digest: cYLnlrpmZwhSPX01QaP0QBHukk0=
+
+Name: morsekob/Options$7.class
+SHA1-Digest: QMxELaAYKStsT8Sev5dviIkBRsE=
+
+Name: gnu/io/ParallelPortEvent.class
+SHA1-Digest: qsx5xW0P8i1V3K9oj1O2rolYWow=
+
+Name: morsekob/Reader.class
+SHA1-Digest: o0JS7d0u1kH6dVDmiNJ+lQqjuiQ=
+
+Name: morsekob/Main.class
+SHA1-Digest: ZxF9lsbTuW7RihtIuDr8cPBMVC4=
+
+Name: gnu/io/RS485PortEventListener.class
+SHA1-Digest: UJlAwTVlk5oTvtJQl1XSmCiglGQ=
+
+Name: gnu/io/CommPortIdentifier.class
+SHA1-Digest: 4xjZA4cBHK5RZt0K8zxGTbD/Z4E=
+
+Name: gnu/io/CommPortEnumerator.class
+SHA1-Digest: L8jx59FY1feqOpLqN1S8xUQ1Dto=
+
+Name: gnu/io/RXTXPort$SerialInputStream.class
+SHA1-Digest: BnEyYx6MhpqrUVOhk4OvvyO9FFU=
+
+Name: gnu/io/RXTXPort.class
+SHA1-Digest: KkeXxUs57dNqLpnBbuG3fb6iq1o=
+
+Name: morsekob/Controls$13.class
+SHA1-Digest: D+Uxfk6uyz7BRg+BuMv/zeEGuDo=
+
+Name: gnu/io/SerialPortEventListener.class
+SHA1-Digest: xmyboL77Dq8i7GQnAWq1GgSwYsY=
+
+Name: gnu/io/Raw$RawInputStream.class
+SHA1-Digest: ampbE7f1vnXRn6+wHyyCgzwDuwc=
+
+Name: gnu/io/Configure.class
+SHA1-Digest: q+4w4hHmwMbAXJFkHh4qVB0h8kY=
+
+Name: gnu/io/Raw$RawOutputStream.class
+SHA1-Digest: VcKe3Cdsb9Jd6f56g3HChaWS3qM=
+
+Name: gnu/io/RXTXPort$SerialOutputStream.class
+SHA1-Digest: 6S9YrObECfSFUhS7t9U3Ylh6P2Q=
+
+Name: morsekob/Controls$16.class
+SHA1-Digest: ka9b9y1VN19ABgzfoUik7wAXAOo=
+
+Name: morsekob/Internet.class
+SHA1-Digest: n/G+HzdQw59ySON9jBVndlOWu6I=
+
+Name: gnu/io/LPRPort$ParallelInputStream.class
+SHA1-Digest: 5wirx1DzgmYy4yqeYF8DnELubbg=
+
+Name: gnu/io/RS485$RS485OutputStream.class
+SHA1-Digest: qXPZIg6Z9eH9X9eX+b1jtx2z47E=
+
+Name: morsekob/Options$10.class
+SHA1-Digest: JhIrheEdtBoTE+HMWh1UgbtcMwY=
+
+Name: morsekob/Options$2.class
+SHA1-Digest: awvYpo9cHGQReogaz73Vt2N/4Ug=
+
+Name: gnu/io/RawPortEventListener.class
+SHA1-Digest: HAsgWO+E1uCj10aF9+I3di6yokg=
+
+Name: gnu/io/SerialPort.class
+SHA1-Digest: CdeppgVW94WPXis5BEM/ehAyegY=
+
+Name: gnu/io/RS485$RS485InputStream.class
+SHA1-Digest: dJPggDbSt+aLY6BPdV5N0TdkDCM=
+
+Name: morsekob/Applet$1.class
+SHA1-Digest: 58g23tL2+qCvn33hm99b7DHaKa0=
+
+Name: morsekob/Controls$15.class
+SHA1-Digest: Vw545Gphq4BDZgEOIL6kC0pTYD4=
+
+Name: morsekob/Controls$6.class
+SHA1-Digest: WR5Dtzr+e0B6emSydjVdIE0sqSk=
+
+Name: gnu/io/ParallelPort.class
+SHA1-Digest: lFZ8hqnoWO/XuN0l+D8ecx03HpQ=
+
+Name: gnu/io/Zystem.class
+SHA1-Digest: ELJck2WGfOkColvDXm8irywVANQ=
+
+Name: gnu/io/LPRPort$MonitorThread.class
+SHA1-Digest: pLBgp6IDkRMxE9H82gs8MHoDmXI=
+
+Name: morsekob/Controls$18.class
+SHA1-Digest: 4bB3gimlEgECdgsw0qkPYHfJqTg=
+
+Name: gnu/io/Configure$1.class
+SHA1-Digest: r8EhA+zKwPefgz+Pr8gYCcDzYLs=
+
+Name: gnu/io/RS485PortEvent.class
+SHA1-Digest: pGlX1lwZNYjKmBoEWNhuCOUTJO0=
+
+Name: gnu/io/CommDriver.class
+SHA1-Digest: vbiL8CfKvJ70R+xrGWJRcKj4Dzg=
+
+Name: gnu/io/RS485.class
+SHA1-Digest: N9vh9Ceh+gjqTn5lMkE2y2HnvlA=
+
+Name: gnu/io/Configure$3.class
+SHA1-Digest: 81u5O/ITA7wu4Zkj4+7fwywhuS8=
+
+Name: morsekob/Options$1.class
+SHA1-Digest: OJdHI1o5C4SA7vT+YMIPGgjI6Hg=
+
+Name: morsekob/Internet$KeepAlive.class
+SHA1-Digest: AkKHfe8krpcQ2m6IjW7SIe+D8Yo=
+
+Name: morsekob/Controls$1.class
+SHA1-Digest: r1MnNBs4OVenJ9M1yu/JI42/2YA=
+
+Name: morsekob/Options.class
+SHA1-Digest: jMsICiNilvrLUe0fFD8ejVxX3Lc=
+
+Name: gnu/io/PortInUseException.class
+SHA1-Digest: KXepOHk7Hh41rGM8y7R+VNTxu5g=
+
+Name: gnu/io/CommPort.class
+SHA1-Digest: vQwGOVygIMWbcUFxa6vl9K4Rnb4=
+
+Name: META-INF/INDEX.LIST
+SHA1-Digest: cU6zMiXReNOdBRWsArZ+nKqAIdw=
+
+Name: gnu/io/CommPortOwnershipListener.class
+SHA1-Digest: iftW+P8NHxJBqOWxXAzHqaLWbDM=
+
+Name: gnu/io/RawPort.class
+SHA1-Digest: ju+egPcoxEMrGVwo+vD1Dar4lgQ=
+
+Name: gnu/io/LPRPort.class
+SHA1-Digest: Gk9GEdXv2S3w4dx+GI8Ni3Ee5mM=
+
+Name: morsekob/Options$11.class
+SHA1-Digest: W/JFUgxpvQbPTkUASoYrlQj/KBA=
+
+Name: gnu/io/RawPortEvent.class
+SHA1-Digest: 5D/46gKjhhGLNRluezW1NJvrU+s=
+
+Name: gnu/io/UnSupportedLoggerException.class
+SHA1-Digest: z7leB0Xksf9p1C8Hymndlrpgbwg=
+
+Name: morsekob/Click.wav
+SHA1-Digest: PPDC7Uy0xMdQBLUNZjd/SX/0S6U=
+
+Name: morsekob/Options$5.class
+SHA1-Digest: WGGd6BzMVjF4qUaaTeOAulsCxoA=
+
+Name: morsekob/Controls$17.class
+SHA1-Digest: ftlJfDG1iYhVYPAPXxF468dum6U=
+
+Name: morsekob/Controls$10.class
+SHA1-Digest: UHAsNVuSrTp3e0gDEOBqs/PELKE=
+
+Name: morsekob/Options$3.class
+SHA1-Digest: az2ugkiudooFrLUcNv45Y4jzMm4=
+
+Name: morsekob/Sounder.class
+SHA1-Digest: SGQQ58aNRwuL+XhxNiuDa+AVuzw=
+
+Name: gnu/io/RS485$MonitorThread.class
+SHA1-Digest: ysSNo1HHQtbo6tVzQbP17aaPSQw=
+
+Name: morsekob/KOB.class
+SHA1-Digest: Z4XEDmMpWgoUXx/ZVYnl3Qt4ZQI=
+
+Name: morsekob/Controls$11.class
+SHA1-Digest: 44ga1ElGUDyh4KqAZ0k2gYqXFPY=
+
+Name: morsekob/Options$4.class
+SHA1-Digest: F0xGFklLmLB0wztfLs9NBRhkljA=
+
+Name: gnu/io/I2C$I2COutputStream.class
+SHA1-Digest: ANW1q7P3UzMTRgSlX5jO9KK9KFc=
+
+Name: morsekob/Sender.class
+SHA1-Digest: ot8JMCcmUWZhK8lNKThxyyGa7TI=
+
+Name: morsekob/Controls$12.class
+SHA1-Digest: Qc4gauk8pmlToZyjO/CSo0QrBgA=
+
+Name: morsekob/Clack.wav
+SHA1-Digest: qDrePsVe/lbjsKlGcqOrxipWyk4=
+
+Name: gnu/io/UnsupportedCommOperationException.class
+SHA1-Digest: P7/KrPM/YdJSW8R4Yjm+rcsq39A=
+
+Name: morsekob/Options$12.class
+SHA1-Digest: OIo8NBseBEJ7Zd59+8Gtnhfcomk=
+
+Name: morsekob/Options$6.class
+SHA1-Digest: 6CfZ2fBxY6Vaz4DHkSQwEWtbpPA=
+
+Name: morsekob/Controls.class
+SHA1-Digest: h+KWzSVeNZ3Ii+szQoBBZTlNlJA=
+
+Name: gnu/io/RXTXVersion.class
+SHA1-Digest: CeyZsn0CoZnHyY9seCKkXyVpCrU=
+
+Name: gnu/io/I2C$I2CInputStream.class
+SHA1-Digest: 5qdINTQiX6RRBtUK/rnkjJDR37U=
+
+Name: gnu/io/RS485Port.class
+SHA1-Digest: MyYXzjL8kO/wh9LuoTaa/bVyAzU=
+
+Name: gnu/io/ParallelPortEventListener.class
+SHA1-Digest: pFWgp2L34/owyer5bjjPvLfZFZo=
+
+Name: gnu/io/LPRPort$ParallelOutputStream.class
+SHA1-Digest: 66myzLCWxdA/ZaAvO+qrhLt/Wus=
+
+Name: morsekob/Applet.class
+SHA1-Digest: R0jHbmk9EFmyCjMC9mcEom0o6sY=
+

@@ -1,0 +1,277 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>MorseKOB 3.0 Help</title>
+<link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+
+<body>
+
+<h1>MorseKOB 3.0<br>
+<img border="0" src="images/kob.jpg" width="270" height="180"></h1>
+<h2>Contents</h2>
+<ul>
+  <li><a href="#starting">Getting started</a></li>
+  <li><a href="#typing">Sending on the keyboard</a></li>
+  <li><a href="#options">Options</a></li>
+  <li><a href="#equip">Connecting external equipment</a></li>
+  <li><a href="#usb">USB-to-serial adapter</a></li>
+  <li><a href="#rxtx">RXTX software</a></li>
+  <li><a href="#problems">Known problems</a></li>
+  <li><a href="#troubleshooting">Troubleshooting</a></li>
+</ul>
+<h2><a name="starting"></a>Getting started</h2>
+<p><i>When you run the program for the first time after a new version has been
+posted, the system may warn you that it doesn't recognize the application's
+digital signature.&nbsp; You can safely disregard this warning and run the
+program.</i></p>
+<ol>
+  <li>Make sure the <b>Circuit Closer</b> box is checked.&nbsp; The circuit must
+    be closed in order to receive.</li>
+  <li>Select an active wire by typing its number in the <b>Wire #</b> box, or
+    change the current wire number by clicking on the small up and down arrows
+    next to the number.&nbsp; Wire #101 is a good first choice, because it's
+    always active.</li>
+  <li>Click on the <b>Connect</b> button to connect to the wire.&nbsp; The small
+    box to the right of the wire number turns red, indicating that you're
+    connected.&nbsp; If there's any activity on the wire, you should hear the
+    clicks of a telegraph sounder coming from your speakers.&nbsp; If the
+    connect indicator remains white, that means the program is unable to connect
+    to the KOB server.</li>
+  <li>The IDs of all the stations connected to the wire you connected to appear
+    in the <b>ID list</b> in the upper right part of the KOB window.</li>
+  <li>The program does its best to decode any Morse that's sent over the wire
+    and displays the text in the <b>code reader</b> area in the upper left part
+    of the window.&nbsp; If the speed of the incoming code changes abruptly from
+    a fast speed to a much slower speed, the code reader may fail to lock in on
+    the new speed.&nbsp; To <b>resynchronize</b> the code reader, click the
+    mouse anywhere in the code reader area.</li>
+  <li>To <b>disconnect</b> from the wire, click on the connect button
+    again.&nbsp; The connect indicator turns white to show that you're
+    disconnected.</li>
+</ol>
+<h2><a name="typing"></a>Sending on the keyboard</h2>
+<p>You can send Morse, either locally or to someone else over the Internet, by
+typing on the keyboard.</p>
+<ol>
+  <li>Enter a two-letter <b>office call</b>, your first <b>name</b>, and your <b>location</b>
+    (city or town, and state or province) in the text box just above the Circuit
+    Closer.&nbsp; This is a courtesy to other operators so they'll know who's on
+    the wire.</li>
+  <li>Set the desired sending speed in the <b>WPM</b> box.</li>
+  <li>Uncheck the <b>circuit closer</b> box by clicking on it.&nbsp; This opens
+    the circuit to enable sending.</li>
+  <li>Click in <b>keyboard</b> area in the lower left of the KOB window to place
+    the cursor there and type whatever you want to send on the keyboard.&nbsp;
+    Typeahead is allowed.&nbsp; The program highlights each character as it's
+    sent.</li>
+  <li>When you're done typing, wait for the program to finish sending your text
+    and then click on the <b>circuit closer</b> box to close the circuit.</li>
+</ol>
+<p><i>If you prefer, you can toggle the circuit closer open and closed by
+pressing the </i><b>Escape</b><i> key instead of clicking on the Circuit Closer
+control.</i></p>
+<h2><a name="options"></a>Options</h2>
+<p>Click on the <b>Options</b> button on the main KOB window to open the options
+window.&nbsp; After selecting the desired options, click on the OK button to
+close the options window.</p>
+<p><b>Sound</b></p>
+<p>Use the pull-down menu to select a specific sound card on your computer.</p>
+<p>Check the Mute box to silence the speakers.</p>
+<p><b>Port</b></p>
+<p>Use the pull-down menu to select the desired serial port.&nbsp; The controls
+in the Port panel are enabled only if you have activated the serial port
+interface by installing <a href="#rxtx">RXTX software</a> on your computer.</p>
+<p>Check the Keyer box if you want to connect a keyer paddle to the serial port
+and use it to simulate a bug.</p>
+<p><b>Mode</b></p>
+<p>Use the first pull-down menu to select your mode of operation:</p>
+<ul>
+  <li><i>Basic</i>: No external hardware.</li>
+  <li><i>Key only</i>: Use a key connected to the computer for sending.</li>
+  <li><i>Key and sounder</i>: Use a key and a simple driver circuit for
+    connecting a sounder.</li>
+  <li><i>Loop interface</i>: Use a loop interface circuit to tie the computer
+    into an existing telegraph loop consisting of one or more keys, sounders,
+    relays, etc.</li>
+</ul>
+<p><i>Note: In some situations, to have a new mode setting take effect you will
+have to restart the program by refreshing the web page.</i></p>
+<p>Use the second pull-down menu to specify whether the code reader and keyboard
+sender should use American Morse or International (Continental) code.&nbsp; To
+avoid confusion, it's recommended that wires 20 through 29 be used for
+International Morse.</p>
+<p><b>Farnsworth</b></p>
+<p>If the WPM setting in the Farnsworth panel is greater than the WPM setting on
+the main KOB window, the code sender will send characters at the higher speed
+but insert enough extra space—between characters or words, as desired—so
+that the overall code speed is maintained at the lower rate.</p>
+<p><b>Other</b></p>
+<p><i>Code reader</i>: This checkbox enables or disables the code reader.</p>
+<p><i>Show versions</i>: Appends the program version numbers to the IDs
+displayed in the ID list.</p>
+<p><i>Capture timing</i>: Causes the program to display the timing of sent or
+received code.&nbsp; Positive numbers represent marks (in milliseconds) and
+negative numbers represent spaces.</p>
+<h2><a name="equip"></a>Connecting external equipment</h2>
+<p>In order to use MorseKOB with an external key or sounder, you'll need the
+following:</p>
+<ul>
+  <li>USB-to-serial adapter cable</li>
+  <li>RXTX add-on software for Java</li>
+  <li>Hardware interface (one of the following):</li>
+  <ul>
+    <li><i>For key only:</i> a <a href="http://home.comcast.net/~morsekob/morsekob.htm#Key">serial
+      cable</a> connecting an external bug or straight key directly to the USB
+      adapter</li>
+    <li><i>For key and sounder:</i> a <a href="http://home.comcast.net/~morsekob/morsekob.htm#AppendixD">sounder
+      driver circuit</a> to control an external sounder</li>
+    <li><i>For a local loop:</i> a <a href="http://morsekob.org/techdocs/index.htm">loop
+      interface circuit</a> to allow any combination of keys, sounders, and
+      relays wired in series to be connected to the computer</li>
+  </ul>
+</ul>
+<h2><a name="usb"></a>USB-to-serial adapter</h2>
+<p><i>[Add info about recommended adapters (Cables to Go for Windows and Linux,
+Keyspan for Mac OS X) and how to install the driver software.]</i></p>
+<h2><a name="rxtx"></a>RXTX software</h2>
+<p>Java itself doesn't provide access to the serial port, so if you want to
+connect a key or sounder to your computer you'll have to install an RXTX module
+specific to your operating system.</p>
+<p>Once you've installed the RXTX software according to the instructions below,
+all available serial ports will appear in the pull-down list on the MorseKOB
+control panel.&nbsp; Select the one that you're using for your telegraph
+interface.</p>
+<p>An easy way to tell which comm port is associated with a particular USB
+adapter is to unplug the adapter, note the comm ports that appear in the list,
+then plug the adapter in again and see which one has been added.&nbsp; You'll
+have to restart the program (by refreshing the web page, for example) to update
+the port list after you connect or disconnect a USB adapter.&nbsp; <i>This trick
+doesn't work for the Mac, but the port names are more intuitive on the Mac
+anyway.</i></p>
+<p><b>Windows<br>
+</b>Download the file rxtxSerial.dll (<a href="rxtx32/rxtxSerial.dll">32-bit</a>
+or <a href="rxtx64/rxtxSerial.dll">64-bit</a> version) and save it in C:\Windows
+(or any other location in your system's library search path).</p>
+<p><b>Mac OS<br>
+</b>Download the file librxtxSerial.jnilib (<a href="rxtx3264/librxtxSerial.jnilib">32/64-bit</a>
+combined version) and save it in Macintosh
+HD/System/Library/Java/Extensions.&nbsp; <i>To download the file with Safari,
+Control-click on the link and select Save Linked File As.&nbsp; Make sure Safari
+doesn't append a .txt extension to the filename.</i></p>
+<p><b>Linux<br>
+</b>Download the file librxtxSerial.so (<a href="rxtx32/librxtxSerial.so">32-bit</a>
+or <a href="rxtx64/librxtxSerial.so">64-bit</a> version) and save it in /usr/lib
+(or any other location in your system's library search path).</p>
+<h2><a name="problems"></a>Known problems</h2>
+<ul>
+  <li>The speakers don't work well with a bug.</li>
+  <li>The speakers can't be used at the same time as a sounder.</li>
+  <li>If the wire number is changed while the program is connected to the
+    server, it can take up to 10 seconds for the change to take effect.</li>
+  <li>If you edit your ID text while the program is connected to the server, the
+    change won't be visible to other users until you press Enter or click on
+    some other part of the KOB window.</li>
+  <li>Audio doesn't work in some versions of Linux.&nbsp; This is due to a bug
+    in OpenJDK/IcedTea.&nbsp; Contact me for a workaround.</li>
+  <li>The simulated sounder sometimes runs characters together.&nbsp; (The
+    external sounder may have the same problem, but it has not been reported
+    yet.)</li>
+  <li>The code reader sometimes displays letters twice.</li>
+  <li>The highlight for the current character in the keyboard window is
+    sometimes not properly restored.</li>
+  <li>The Mac version of the RXTX software has a bug that causes the program to
+    crash when you try to close a port or change a port that has already been
+    selected.&nbsp; To get around this problem, download and run the
+    ResetOptions program (see the <a href="#troubleshooting">Troubleshooting</a>
+    section).&nbsp; This will allow you to open a different port.</li>
+  <li>KOB 3.0 is no longer compatible with the latest Mac version of Java.&nbsp;
+    You'll have to use download and install the version from <a href="http://java.com">java.com</a>
+    instead.</li>
+</ul>
+<h2><a name="troubleshooting"></a>Troubleshooting</h2>
+<p>If you have any questions, comments, or suggestions—no matter how trivial
+or obvious they may seem—I definitely want to hear from you.&nbsp; I may not
+be seeing the same thing on my computer and I may not have heard about it from
+anyone else.&nbsp; My email address is at the bottom of the <a href="../index.htm">MorseKOB
+home page</a>.</p>
+<p><b>Java version</b></p>
+<p>MorseKOB 3.0 requires Java Version 6 or later (also known as version
+1.6.0).&nbsp; If the MorseKOB web page doesn't display the KOB control panel,
+then visit <a href="http://java.com/en/download/testjava.jsp" target="_blank">java.com/en/download/testjava.jsp</a>
+to see which version of Java is installed on your computer.</p>
+<blockquote>
+  <p><i>Mac users who delete the Apple-supplied Java program and install the
+  latest one from Oracle must delete the old Java preferences file in
+  Macintosh&nbsp;HD/Applications/Utilities, if installation of the Oracle
+  version leaves it in place.</i></p>
+  <p><i>Also, the Java files at the user level are in
+  Macintosh&nbsp;HD/Users/(username)/Library/Oracle/Java. But ordinarily there
+  is no need to access the files in there.</i></p>
+  <p><i>To access the User-level Library folder, click on the desktop to bring
+  the Finder to the front. Hold down the Option key and click on the Go menu.
+  &quot;Library&quot; will then be listed as a choice. For some reason this is
+  the only way to access it in Lion and Mountain Lion.</i></p>
+</blockquote>
+<p><b>Java console</b></p>
+<p>If you have trouble running the program, I may ask you for a copy of the Java
+console output.&nbsp; If you're running Windows, here's how to enable the Java
+console:</p>
+<ol>
+  <li>Go to the Windows Control Panel.</li>
+  <li>Open the Java Control Panel.</li>
+  <li>Select the Advanced tab.</li>
+  <li>Click on the + sign next to &quot;Java console&quot;.</li>
+  <li>Click on the &quot;Show console&quot; radio button.</li>
+  <li>Click on OK to close the Java Control Panel.</li>
+  <li>Close the Windows Control Panel.</li>
+</ol>
+<p><i>If you're running Mac OS X, do the following:</i></p>
+<ol>
+  <li><i>Go to Applications &gt; Utilities and open Java Preferences</i></li>
+  <li><i>Select the Advanced tab.</i></li>
+  <li><i>Click on the &quot;Show console&quot; radio button.</i></li>
+  <li><i>Quit out of Java Preferences.</i></li>
+</ol>
+<p>Once you've done this, whenever you run MorseKOB a Java console window will
+open up and display status and diagnostic information for the program. You can
+copy this data by clicking on the Copy button at the bottom of the window, which
+you can then insert directly into an email message.</p>
+<p><b>Screen shots</b></p>
+<p>I may also want to see a screen shot of your KOB window.&nbsp; Here's the
+procedure for doing that in Windows:</p>
+<ol>
+  <li>Make sure the KOB window is active by clicking on the window's title bar.</li>
+  <li>Press Alt-PrintScreen on your keyboard to capture a copy of the window's
+    screen image.</li>
+  <!--
+  <li>Open the Paint program (found in the Accessories folder in the Windows
+    Start menu).</li>
+  <li>Press Ctrl-V to paste the image into Paint.</li>
+  <li>Press Ctrl-S to save the image, selecting PNG as the file type.</li>
+  <li>Close Paint.</li>
+  <li>Attach the saved file to an email message.</li>
+-->
+  <li>Paste the image into an email message.</li>
+</ol>
+<p><i>On the Mac, press Command-Shift-4 (for a portion of the screen) or
+Command-Shift-3 (for the entire screen) to save a screen shot to the
+desktop.&nbsp; On Linux, use Applications &gt; Accessories &gt; Take Screenshot.</i></p>
+<p><b>Resetting options</b></p>
+<p>To restore the program's options to their default settings, download and run
+the program <a href="ResetOptions.jar">ResetOptions</a>.&nbsp; This program runs
+very quickly and without any visible output, so it may appear that it hasn't
+done anything.&nbsp; But the next time you run the KOB program, you should find
+that its settings have reverted to their default state.</p>
+<p>&nbsp;</p>
+<p align="right"><font size="1">Revised 2012-09-28<br>
+<a href="../index.htm">Les Kerr</a></font></p>
+
+</body>
+
+</html>

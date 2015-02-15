@@ -1,0 +1,217 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>MorseKOB FAQ</title>
+<style type="text/css">body         { font-family: Arial, sans-serif; font-size: 10pt; color: black; 
+               background-color: white; width: auto; margin-left: 10%; 
+               margin-right: 10% }
+h1           { text-align: center; font-size: 18pt; font-weight: bold }
+h2           { text-align: left; font-size: 14pt; font-weight: bold; 
+               border-bottom: thin solid black; margin-top: 1.5em; 
+               margin-bottom: 1em }
+div.contents p { font-weight: bold; margin-left: 2em; margin-top: .75em; margin-bottom: .75em }
+div.contents a:link, div.contents a:visited, div.contents a:active { text-decoration: none }
+div.fig-center { text-align: center; font-style: italic }
+div.fig-float { float: right; text-align: center; font-style: italic; margin-left: 1em; 
+               margin-bottom: 1em }
+hr           { margin-right: 70% }
+</style>
+</head>
+
+<body>
+
+<h1>MorseKOB 2.5 FAQ</h1>
+<p>These <b>frequently asked questions</b> cover topics that go beyond the basic
+information provided by the <a href="tutorial.htm">MorseKOB 2.5 Tutorial</a>.</p>
+<p>If you have a question about the KOB program, no matter how trivial or
+esoteric it may seem, please contact me.</p>
+<p><img border="0" src="../images/sig.gif" width="60" height="50"><br>
+<font face="Times New Roman"><b>Les Kerr</b><br>
+<img border="0" src="../images/email-les.png" width="142" height="21"></font></p>
+<div class="contents">
+  <h2>Questions</h2>
+  <p><a href="#version">How can I tell which version of the program I'm running?</a></p>
+  <p><a href="#install">How do I install the program manually?</a></p>
+  <p><a href="#maclinux">Can I run the program on my Mac or Linux computer?</a></p>
+  <p><a href="#reader">Why doesn't the code reader distinguish between the
+  letter L and the figure Ø?</a></p>
+  <p><a href="#copy">How can I print or save the text in the code reader window?</a></p>
+  <p><a href="#asterisk">What does it mean when the code reader displays
+  asterisks?</a></p>
+  <p><a href="#overrun">What does the &quot;overrun&quot; message mean?</a></p>
+  <p><a href="#settings">Can I have multiple copies of the program with
+  different saved settings?</a></p>
+  <p><a href="#farnsworth">What are the Farnsworth settings on the Preferences
+  screen for?</a></p>
+  <p><a href="#timing">How can I use the program to check the timing of my bug?</a></p>
+  <p><a href="#internet">How can I check the quality of the Internet?</a></p>
+  <p><a href="#port">How can I tell which COM port my USB adapter is on?</a>
+</div>
+<h2>Answers</h2>
+<h3><a name="version"></a>How can I tell which version of the program I'm
+running?</h3>
+<p>Go to the Help&nbsp;&gt;&nbsp;About&nbsp;MorseKOB menu.&nbsp; The popup
+window will display the major version number (e.g. version&nbsp;2.5) as well as
+the minor revision level within that version (e.g. rev&nbsp;806-4, which would
+indicate the fourth revision made during the month of July,&nbsp;2008).</p>
+<h3><a name="install"></a>How do I install the program manually?</h3>
+<p>In some situations (64-bit versions of Windows, for example, or web browsers
+other than Internet Explorer) the normal installation procedure won't
+work.&nbsp; In this case, you'll have to install the program manually.&nbsp;
+Here's how:</p>
+<ol>
+  <li>Open the file at <a href="http://morsetelegraphclub.org/morsekob/download/morsekob.zip">www.morsetelegraphclub.org/morsekob/download/morsekob.zip</a>
+    and copy the folder named MorseKOB onto your hard drive.&nbsp; (The usual
+    location for this folder is My&nbsp;Documents, but you can put it anywhere
+    you want.)</li>
+  <li>The MorseKOB folder on your hard drive contains a subfolder called
+    Text&nbsp;Files and four other files. One of these files is a 420&nbsp;KB
+    application file named MorseKOB.</li>
+  <li><i>Right</i> click on the MorseKOB application file and select
+    Send&nbsp;To&nbsp;&gt;&nbsp;Desktop to create a MorseKOB shortcut on your
+    computer's desktop.</li>
+</ol>
+<p>Run the program by double-clicking on the MorseKOB shortcut.</p>
+<p>You can uninstall the application by deleting the MorseKOB folder and the
+MorseKOB shortcut.</p>
+<p>Note: If you don't already have the <b>.NET&nbsp;Framework&nbsp;2.0</b>
+software installed on your computer, you'll have to download it from the
+Microsoft site at <a href="http://www.microsoft.com/downloads" target="_blank">www.microsoft.com/downloads</a>.</p>
+<h3><a name="maclinux"></a>Can I run the program on my Mac or Linux computer?</h3>
+<p>MorseKOB 2.5 assumes it's running on a Windows computer.&nbsp; Some Mac and
+Linux users have successfully gotten around this requirement by running Windows
+emulation software on their computers, such as VMware Fusion.&nbsp; MorseKOB
+3.0, on the other hand, is designed to run equally well on Windows, Mac OS X, or
+Linux.&nbsp; See the <a href="../index.htm">KOB home page</a> for details.</p>
+<h3><b><a name="reader"></a>Why doesn't the code reader distinguish between the
+letter L and the figure Ø?</b></h3>
+<p>It used to, but in reality I found there was so much variation in the way
+different operators send L and zero that the program often misinterpreted one
+for the other.&nbsp; I also found it less confusing to have an L instead of a Ø
+in the middle of a number than it was to have a Ø instead of an L in the middle
+of a word, so I changed the program to always display an L for any dash longer
+than a T.</p>
+<p>Similarly,&nbsp; <b>·&nbsp;&nbsp;&nbsp;·&nbsp;·&nbsp;·</b>&nbsp; always
+decodes as ES, never as &amp;.&nbsp; I found it particularly off-putting when my
+name would decode as Ø&amp;.&nbsp; Try sending LES and Ø&amp; in American
+Morse and you'll see what I mean!</p>
+<h3><b><a name="copy"></a>How can I print or save the text in the code reader
+window?</b></h3>
+<p>Copy the text to the Windows clipboard and then copy the clipboard into your
+word processing program, email program, or whatever.&nbsp; You can then print
+the text, send it to someone else as an email message, or save it as a file on
+your computer.</p>
+<p>To copy all of the text in the code reader window, <i>right</i> click in the
+window and choose Select All, then <i>right</i> click again and choose Copy.
+<h3><a name="asterisk"></a>What does it mean when the code reader displays
+asterisks?</h3>
+<p>The asterisk that sometimes appears in the code reader window is a warning
+that an incoming data packet got lost in the network.&nbsp; The packet can get
+dropped between the sender and the server, in which case everyone sees an
+asterisk, or between the server and the receiver.</p>
+<p>In general, a packet corresponds to a single Morse character.&nbsp; However,
+spaced Morse characters (C, O, R, Y, Z, and &amp;) are often transmitted as two
+separate packets.&nbsp; It's all a function of the sending operator's fist and
+the nominal code speed setting on the sending operator's KOB window.</p>
+<p>The asterisk is displayed as soon as the error is detected, not necessarily
+in the sequence of letters as they're decoded, so the missing character is
+usually a letter or two after the point where the asterisk appears.</p>
+<h3><a name="overrun"></a>What does the &quot;overrun&quot; message mean?</h3>
+<p>If [Overrun] appears in the code reader window, it's a sign that some other
+program is running on your computer and taking up too much of the CPU.&nbsp; The
+KOB program assigns its highest priority to time-critical tasks, such as
+handling the key and sounder, and the lowest priority to the code reader.&nbsp;
+If the program doesn't get its full share of the CPU, the code reader is the
+first to suffer.&nbsp; The program displays the &quot;overrun&quot; message as a
+warning that one or more characters have not been decoded.</p>
+<p>Determining which program is competing for the CPU can be tricky, because it
+won't necessarily show up on the task bar at the bottom of your screen.&nbsp; By
+way of example, here's what I did to solve a chronic performance problem I had
+with the KOB program on my computer.&nbsp; During one of its &quot;overrun&quot;
+episodes, I pressed Ctrl-Alt-Del to bring up the Windows Task Manager. Selecting
+the Processes tab and clicking on the CPU column header to sort the tasks by CPU
+usage showed that a process named AppSvc.exe was hogging almost 100 percent of
+the CPU.<br>
+<br>
+By searching for AppSvc32.exe on Google, I found that it's a task associated
+with Norton's antivirus software. Further digging revealed that when Norton
+updates its virus definitions it performs a &quot;quick scan&quot; of the
+computer. This is what AppSvc32.exe was doing when it took over my CPU.&nbsp;
+The default settings on my version of Norton cause it to do a
+&quot;LiveUpdate&quot; to check for new virus definitions automatically every
+four hours. I've since changed the LiveUpdate schedule so that it checks at
+least once a day, but at a time that won't interfere with my use of the KOB
+program.</p>
+<h3><a name="settings"></a>Can I have multiple copies of the program with
+different saved settings?</h3>
+<p>To do this, you'll first need to install the program <a href="#install">manually</a>
+instead of using the normal installation procedure from the MorseKOB
+website.&nbsp; In the MorseKOB folder, make as many copies of the MorseKOB
+application file as you need.&nbsp; If you like, you can create separate desktop
+shortcuts for each copy of the program.&nbsp; Each copy of the program will
+maintain its own set of preference settings.</p>
+<h3><a name="farnsworth"></a>What are the Farnsworth settings on the Preferences
+screen for?</h3>
+<p>Farnsworth is a method of learning Morse code where characters are sent at
+full speed and extra space is inserted between the characters to slow down the
+overall code speed.&nbsp; The usage of the Farnsworth settings is explained in
+the <a href="../docs/morsecourse.pdf">KOB Morse Course</a>.&nbsp; This document
+also shows how to use the File&nbsp;&gt;&nbsp;Lesson menu option.</p>
+<h3><a name="timing"></a>How can I use the program to check the timing of my
+bug?</h3>
+<p>If you go to the Tools&nbsp;&gt;&nbsp;Debug menu and check the
+Capture&nbsp;Timing box, the program will save the timing of your keying.&nbsp;
+Send several strings of dots with your bug, then uncheck the Capture&nbsp;Timing
+box.&nbsp; The program will display the timing of your code in the reader
+window.&nbsp; A positive number represents the length of a mark (key down) and a
+negative number represents a space (key up).&nbsp; All times are in
+milliseconds.</p>
+<p>In the same way, you can check the timing of someone else's keying as it
+comes in over the Internet.</p>
+<h3><a name="internet"></a>How can I check the quality of the Internet?</h3>
+<p>It's sometimes difficult to know how well the Internet is performing,
+especially if you're using wireless and it's your transmitted signal that may be
+marginal even though you can receive fine.&nbsp; Here's how you can set up an
+end-to-end test:</p>
+<ol>
+  <li>Launch the KOB program.&nbsp; We'll refer to this as
+    &quot;Program&nbsp;A&quot;.</li>
+  <li>With Program&nbsp;A still running, launch the KOB program again.&nbsp;
+    We'll call this second instance &quot;Program&nbsp;B&quot;.</li>
+  <li>Connect Program&nbsp;A and Program&nbsp;B to an inactive wire—wire
+    no.&nbsp;21, for example.</li>
+  <li>Type some text into Program&nbsp;A's code sender window and send the text
+    continuously by checking the Loop box.&nbsp; (Make sure the Code&nbsp;Sender
+    box is checked and the Circuit&nbsp;Closer box is unchecked.)</li>
+</ol>
+<p>By looking for <a href="#asterisk">asterisks</a> in Program&nbsp;B's code
+reader window, you can see whether any packets are being dropped between your
+computer and the KOB server or in the return path back to your computer.</p>
+<p>Since all data packets are sent twice for redundancy, the program displays an
+asterisk only if both packets are dropped.&nbsp; For a more thorough test, put
+Program&nbsp;B into debug mode by going to the Tools&nbsp;&gt;&nbsp;Debug menu
+and checking the Debug&nbsp;Mode box.&nbsp; In debug mode, the program displays
+a circumflex or caret (&nbsp;^&nbsp;) if just a single packet of the pair is
+dropped.&nbsp; An out-of-order data packet is indicated by a degree sign
+(&nbsp;°&nbsp;), and an out-of-order ID packet by an underlined degree sign.</p>
+<p>By the way, Internet problems can cause characters to be dropped, but they
+won't cause the timing of individual characters to be distorted.&nbsp; In other
+words, if someone sends dididit and it comes to you as dididah, that's a timing
+problem with his computer or yours, not the Internet.</p>
+<h3><a name="port"></a>How can I tell which comm port my USB adapter is on?</h3>
+<p>If you go to the Tools &gt; Preferences menu and pull down the Ports list,
+all the available comm ports are displayed.&nbsp; To tell which comm port is
+associated with a particular USB adapter, first unplug the adapter, close and
+reopen the Preferences screen, and note the comm ports that appear in the Ports
+pulldown list.&nbsp; Then plug in the adapter, close and reopen the Preferences
+screen, and see which port has been added to the list.</p>
+<p>If the Ports list is the same whether or not your adapter is plugged in, try
+reinstalling the driver software that came with your adapter.</p>
+<p align="right"><span style="font-size: smaller">&nbsp;<br>
+Revised 2011-12-17<br>
+<a href="../index.htm">MorseKOB Home Page</a></span>
+
+</body>

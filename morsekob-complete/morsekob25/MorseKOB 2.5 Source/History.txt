@@ -1,0 +1,304 @@
+Note: revision number format is YMM-N, where Y is the last digit of the year,
+  MM is the month, and N is the revision number within that month
+
+2.5 (904-1)
+- save Circuit Closer setting
+- save and restore Code Reader and DirectSound options (no code change, just recompiled)
+- publish KOBServer under same GNU license
+
+2.5 (902-1)
+- created new security certificate
+- removed (inactive) Linux checkbox from Debug screen
+- removed Send RY checkbox from Debug screen
+- published under GNU General Public License version 3
+
+2.5 (809-1)
+- don't send "latch" packet on initial connect
+- display out-of-order packet symbol in debug mode only
+
+2.5 (808-2)
+- moved WPM label to background to work with Linux WINE
+- enabled timing check for loop mode
+
+2.5 (806-4)
+- increased long mark threshold to 10 * dotlen (for backwards compatibility)
+
+2.5 (806-3)
+- don't reopen serial port when COM number hasn't changed (avoid spurious breaks)
+- initialize DTR and RTS after opening serial port (fix output stuck low in loop mode)
+- display warning message when serial port can't be opened
+- removed SetXmtStateX, tmrSendCodePacket, and tmrCircuitClosed
+
+2.5 (806-2)
+- removed superfluous special handling for space length of -1 (etc.)
+- fixed problem with changing sound from Off while sending or receiving code with DirectSound enabled
+
+2.5 (806-1)
+- tweaked space between consecutive dashes from 1.5 to 1.6 dot lengths
+- fixed timing of internet sending to account for +1 and +2 not taking any time
+- added TTY RY test to Debug screen (but made checkbox invisible)
+- added TTY mode: send each char after 7 * 22 ms, suppress buffering
+- changed "<No ID>" to "No ID" for empty ID
+- added TTY reader and sender
+- harmonized TTY and Morse
+- reduced buffer delay from 1 sec to 10 * dotlen
+- reduced long mark from 1 sec to 5 * dotlen
+
+2.5 (805-6)
+- made DirectSound an option on the Debug screen
+- save settings properly for Debug and Preferences screens
+- flush ID list on wire change
+- changed "None" to "<No ID>" for empty ID 
+- dropped @ (.-...) from the translator's code definition table
+- changed Farnsworth labels on Preferences screen
+- return focus to code sender window on KOB window reactivation
+
+2.5 (805-5)
+- use regex to sound call alert
+
+2.5 (805-4)
+- set DirectSound buffers to GlobalFocus
+
+2.5 (805-3)
+- set serial port properly on startup
+- changed "KOB Debug" to "None" for empty ID
+
+2.5 (805-2)
+- configured for x86, to be compatible with 64-bit Vista
+
+2.5 (805-1)
+- changed to 2 level version number + build date
+- disable throwing of loader lock exception in VS debug mode
+- stop sound for tone and mixed
+- extended timing data option to capture incoming code from the internet
+- increased DirectSound Cooperative Level to Priority
+- don't update server while scrolling through wire nos.
+- eliminated delay between duplicate code packets (to fix problem with final sent spaced character)
+- display valid serial port options only
+- changed deployment location to morsetelegraphclub.org/morsekob/deploy
+
+2.1.5  (2008-04-27)
+- switched to DirectSound for simulated sounder, to work with Vista
+- interchanged build and revision for version number
+
+2.1.4  (2008-04-09 to 2008-04-19)
+- upgraded to VB 2008
+- replaced Kiwi click & clack sounds with Windows start.wav
+- included text files with Click Once deployment
+- target for .NET Framework 2.0 (advanced compile option)
+- System.Media.SoundPlayer instead of My.Computer.Audio
+- publish without .deploy extension
+
+2.1.3  (2008-02-18)
+- added build number to Debug screen title bar
+- changed loop mode to use noise filter instead of contact debounce
+- don't turn off code sender when click in sender window is at end of text
+- fixed initialization of DTR in "modem" mode (not critical)
+- enabled error messages for serial port in Debug mode
+- ClickOnce deployment on SSKC server (can't use Earthlink web server, 
+     only works with IE, can't run multiple instances)
+
+2.1.2  (2007-08-21)
+- moved second port to Debug screen or outside Preferences window boundary
+- made serial port options suitable for ext key & sdr, modem, or telegraph loop
+- removed (unimplemented) intl code and open ckt options from Preferences
+- switched from channels to wire nos., with default of 1
+- switched from Morse KOB to MorseKOB
+- added loop option for code sender
+- acknowledged Andrew Spurrier on About screen
+- changed default repetition and spacing parameters
+- removed file Farnsworth and file spacing options
+- refresh code sender checkbox display on pressing Pause
+- allow channel change while connected
+- changed some MsgBox errors to Dbg warnings in Internet module to prevent unnecessary crashes
+- added 500ms delay while disconnecting before closing socket
+- fixed Lesson to turn off code reader
+- clicking the mouse in the code sender window turns the code sender off
+
+2.1.1  (2007-03-01)
+- updated Getting started and Beaufort scale text files for KOB Morse Course
+- added port for external modem
+- disabled Channel setting while connected to prevent server errors
+- allow focus to remain on Channel selector
+- fixed problem with disappearing KOB window (minimized)
+- added option for variable noise filter on modem input and display noise stats
+
+2.1.0  (2007-01-15)
+- dropped support for internal dialup Morse modem
+- changed layout of Preferences screen
+- changed default packet spacing to 1ms
+
+2.0.34
+- created new UDP socket to recover from "server error"
+- wait 500ms before recovering from "server error"
+- added Repeater option to External Sounder to suppress echo of key to sounders
+
+2.0.33  (2006-11-27)
+- reduced ID interval from 30 seconds to 10
+- added 50ms space between duplicate code packets
+- added debug option for displaying version numbers in ID window
+- on server error, display message with beep and continue
+
+2.0.32  (2006-11-13)
+- changed internal key LRArrow option to Normal
+- changed the word list to Basic English plus American Morse
+- stop with audible error message on "server error" and attempt autorecovery
+- changed DotVsDash from 2.0 to 1.5 to prevent dahdah from becoming ditdah
+- added new code reader parameter for SpaceAfterDot
+- fixed problem with Repeat causing program to hang on startup
+
+2.0.31  (2006-10-17)
+- lockout morsecode.dyndns.org server address
+- added simulated key with L and R arrow keys
+- moved key options to preferences window
+- exercise sounder on startup
+
+2.0.30  (2006-10-17)
+- changed Ted's credit to "author of Instructograph"
+- save window location
+- changed default file path to relative (..\Data)
+- added OK button to Preferences screen
+- eliminated "Can't open serial port" error message (to prevent lockup on startup)
+- eliminated opening and hiding of Preferences screen on startup
+- save reader mode setting
+
+2.0.29  (2006-09-18)
+- start up in keyboard mode; switch to file mode on New, Open, or Word List
+- removed code sender status indicator
+- replaced code sender controls with On/Off radio buttons 
+- default open circuit on startup and close if necessary on connecting
+- made Kiwi the default sounder (Tone and Mixed too)
+- used home and end keys to reposition cursor
+
+2.0.28  (2006-09-12)
+- added Code Sender status light
+- changed Morse to American on Code panel
+- added control on main window for Keyboard mode
+- change CodeSender to handle "Farnsworth" space (char, word, phrase, file)
+- changed Sounder to Normal; added Plain and Kiwi
+
+2.0.27  (2006-08-29)
+- highlight current character being sent in code sender window
+- added Repeat option for code sender; removed << and < buttons
+- removed Key type, Keyboard mode, and Server address from Preferences screen
+- allow ID window to resize
+
+2.0.26  (2006-08-24)
+- rearranged menu structure
+- changed >> button to <
+- added .-... for @
+- added Sounder, Tone, and Mixed sounders
+- added Lesson builder for code practice
+
+2.0.25  (2006-08-23)
+- ignore serial port errors on setting and testing pin states
+- attempt autorecovery after Receive error
+- added ability to create lessons from a word list
+
+2.0.24  (2006-08-19)
+- added gateway controls to Dialup window
+- added credits to About box
+
+2.0.23  (2006-08-13)
+- clear ID list when disconnecting
+- check circuit closed before connecting
+- bring windows to front when selecting their menu item
+- allow changing channel while connected
+- allow selection of font for text windows
+
+2.0.22  (2006-08-10)
+- use Win32API for serial port so sounder works with adapter cable
+- redesigned window layout
+
+2.0.21  (2006-07-21)
+- added shim to tabcontrol to prevent "connection forcibly closed" error message
+
+2.0.20  (2006-07-18)
+- redesigned code reader (gets actual time, may overrun)
+- created debug form (activate with Alt-D)
+- adjusted thread priorities
+- added Dialup module
+- check for out of order packets
+- get manual key input from dot contact instead of virtual paddle position
+- Auto Key mode forces manual key if dash contact closed on startup
+
+2.0.19  (2006-06-22)
+- cleaned up code for closed-circuit extensions
+- changed program icon
+- stop crashing CWCom on first xmsn after connecting
+
+2.0.18  (2006-06-17)
+- added Auto as an option on the Key menu
+
+2.0.17
+- remove inactive IDs from ID window
+- detect when a paddle is connected to the serial port and set keyer mode automatically
+
+2.0.16
+- moved Timing module into Main file
+- went to ClickOnce deployment method (on seattlekayak.org server)
+
+2.0.15
+- changed method of capturing timing data
+- adjusted code sender parameters based on analysis of my sending
+- added sounder file for Jim Wades' classic sounder
+- changed reading of incoming packets from asynchronous to synchronous
+- display blank ID warning in debug mode only
+- changed length of ' and - spaces between characters
+
+2.0.14
+- added error trap for blank local ID
+
+2.0.13
+- force translation of last character
+- suppress * at start of new transmission
+- tweaked code sender parameters for smoother sending
+
+2.0.12
+- use separate threads with tight loops instead of timers for fast and slow loops
+- removed call to FastLoop on serial port events
+- changed simulated key/paddle from Ctrl/Shift to F7/F8
+
+2.0.11
+- use multimedia timer setup functions to improve system clock resolution
+- changed DotVsDash parameter to 1.8
+
+2.0.10
+- moved udpSocket.BeginReceive to end of udpSocket_AsyncCallback to reduce 
+		chance of data arrival overlap
+- pass t as an argument instead of accessing Timer.t
+- stop timer on program shutdown
+- guard against overlapping timer ticks
+- split into fast loop (multimedia timer) and slow loop (Windows forms timer)
+- changed timer interval to 5 +/-2 ms
+- serial port events call FastLoop and SlowLoop
+- switched to server-based timer for fast and slow loops
+- changed DotVsDash code reader parameter from 1.5 to 1.9
+
+2.0.9
+- added error traps for all udpSocket commands
+
+2.0.8
+- fixed problem with F10 not clearing the ID list properly
+- toggling KOB circuit closer closed regains control of open wire
+- changed default code reader mode to Normal instead of Background
+- right-click on Dial-Up tab toggles debug mode on and off
+- consolidated packet data and timing data
+- double-click on Version field tests unhandled exception
+- reduced timer resolution to 2 ms
+
+2.0.7
+- added error trap for udpSocket.Open failure
+- changed debug mode from double-click to right-click on Dial-Up tab
+- send and display version numbers
+- widened ID list and made ID field same length
+
+2.0.6
+- added F10, F11, F12 for clearing text windows
+- added Pause to stop code sender
+- added Insert to copy from clipboard to keyboard window
+- added exclamation to code defs
+- trapped invalid code speed setting
+- set focus to keyboard
+- fixed problem with code reader splitting initial Morse characters
+- tuned code reader parameters

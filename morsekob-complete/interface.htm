@@ -1,0 +1,273 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="en-us">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>MorseKOB Interface Techniques</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+
+<h1>MorseKOB Interface Techniques</h1>
+<h2>Contents</h2>
+<dl>
+  <dd><img border="0" src="images/bug.jpg" align="right" width="300" height="200"><a href="#options">Interface
+    options</a></dd>
+  <dd><a href="#keyonly">Key only</a></dd>
+  <dd><a href="#sounderdriver">Sounder driver</a></dd>
+  <dd><a href="#loopinterface">Loop interface</a></dd>
+  <dd><a href="#adapters">USB-to-serial adapters</a></dd>
+  <dd><a href="#snubbers">Snubbers</a></dd>
+  <dd><a href="#portpins">Serial port pins</a></dd>
+</dl>
+<h2><a name="options">Interface options</a></h2>
+<p>While it’s possible to send and receive with MorseKOB using just the
+keyboard and speakers, sooner or later you’ll probably want to hook up a key
+and maybe a sounder. There are three options to choose from:</p>
+<dl>
+  <dt>Key only</dt>
+  <dd>The simplest approach is to connect a key to the computer and use the
+    program’s simulated sounder for receiving. This method involves just a
+    simple modification to an off-the-shelf serial cable—no soldering or
+    electronic circuitry required. It allows you to send Morse manually with a
+    straight key or bug, and if you close your eyes you can imagine that you’re
+    hearing an actual sounder.</dd>
+  <dt>Sounder driver</dt>
+  <dd>If you’d like to connect a sounder to your computer, the most
+    straightforward approach is to use a simple sounder driver. This circuit
+    requires only a few commonly available components, and assembly is not
+    difficult for someone who knows how to use a soldering iron.</dd>
+  <dt>Loop interface</dt>
+  <dd>A loop interface circuit provides the most realistic and flexible
+    solution. It allows the computer to be placed in series with a telegraph
+    loop consisting of a power source and one or more keys, sounders, and
+    relays. Although this design is more complex than the simple sounder driver,
+    circuit boards are available to make assembly less of a challenge.</dd>
+</dl>
+<p>Each of these interface options connects to the computer via an RS232 serial
+port. Since few computers come with a serial port nowadays, most likely you’ll
+need a USB adapter cable to make the necessary connection. See the <a href="#adapters">USB-to-serial
+adapters</a> section for some recommendations.</p>
+<table border="0" cellpadding="5" cellspacing="0">
+  <tr>
+    <td valign="top"><img border="0" src="images/warning.gif" width="40" height="36"></td>
+    <td><b>Warning</b>: Switching the current on and off in a circuit containing
+      inductive components like the coils of a sounder or relay can generate
+      high voltage transients which are likely to interfere with and possibly
+      damage sensitive electronic devices. It’s important to guard against
+      this by placing a “snubber” across all sounder or relay terminals. See
+      the <a href="#snubbers">Snubbers</a> section for more information.
+      <p>Static electricity is another source of high voltage that can damage
+      electronic components, for example if you touch the metal part of your key
+      while your body is charged with static electricity. Although unlikely, it
+      has happened, so take appropriate precautions. Using a USB-to-serial
+      adapter cable instead of connecting directly to the computer’s serial
+      port can limit the extent of possible damage.</p>
+    </td>
+  </tr>
+</table>
+<h2><a name="keyonly">Key only</a></h2>
+<p class="image"><img border="0" src="images/usbadapter.jpg" width="480" height="260"></p>
+<p class="caption">Serial cable and USB adapter for connecting a key</p>
+<p>The easiest way to connect a key is to take a serial cable with a female DB9
+connector on one end and simply cut off the connector at the other end. You can
+buy a Belkin F2N209-06 serial extension cable for $5 or less from many online
+suppliers.</p>
+<p>You’ll need to find which wires correspond to pins 4 and 6 on the
+connector, and connect those two wires to your key. Unfortunately, there’s no
+standard color code for serial cables. For the Belkin F2N209-06 cable the
+correct wires are orange and green, but if you have a different cable then you’ll
+need to use an ohmmeter or continuity tester to determine the right wires.</p>
+<h2><a name="sounderdriver">Sounder driver</a></h2>
+<p class="image" image><img border="0" src="morsekob25/images/sounderdriver.gif" alt="Sounder Driver" width="528" height="192"></p>
+<p class="caption" image>Note: RTS = pin 7, SG = pin 5<br>
+Maximum supply voltage: 60 volts</p>
+<div align="center">
+  <table border="0" cellspacing="0">
+    <tr>
+      <td valign="bottom" align="center">
+        <p align="center"><b>Parts List</b></td>
+      <td align="center" valign="bottom"><b>RS Catalog #</b></td>
+    </tr>
+    <tr>
+      <td valign="top" align="left">TIP120 NPN Darlington transistor</td>
+      <td align="center" valign="top">276-2068</td>
+    </tr>
+    <tr>
+      <td valign="top" align="left">10 Kohm 1/4 watt resistor</td>
+      <td align="center" valign="top">271-1335</td>
+    </tr>
+    <tr>
+      <td valign="top" align="left">1N914/4148 diode</td>
+      <td align="center" valign="top">276-1122</td>
+    </tr>
+    <tr>
+      <td valign="top" align="left">1N4005 micro 1 amp diode</td>
+      <td align="center" valign="top">276-1104</td>
+    </tr>
+    <tr>
+      <td valign="top" align="left">9-pin D-sub female connector</td>
+      <td align="center" valign="top">276-1538</td>
+    </tr>
+    <tr>
+      <td valign="top" align="left">D-sub connector hood</td>
+      <td align="center" valign="top">276-1539</td>
+    </tr>
+  </table>
+</div>
+<p>In order to drive an external sounder from the serial port, you’ll need an
+interface circuit like the one shown above. The circuit can be built from parts
+available at Radio Shack for about $6. The components can even be made to fit
+inside a DB9 serial port connector, although you may prefer to build it in a
+project box.</p>
+<p class="image"><img src="morsekob25/images/sounderdriver.jpg" alt="Sounder Interface" width="450" height="300" vspace="2"></p>
+<p class="caption">Serial port connector with sounder interface circuit inside</p>
+<h2><a name="loopinterface">Loop interface</a></h2>
+<p>The loop interface circuit allows the computer to function as part of a
+normal telegraph loop. In its simplest configuration, that telegraph loop would
+consist of a key, sounder, and power supply, but it could contain other
+instruments as well. A circuit diagram and explanation of its operation can be
+found in the <a href="docs/loopinterface.pdf">MorseKOB Loop Interface</a>
+document.</p>
+<p class="image"><img border="0" src="images/loopinterface.jpg" width="480" height="320"></p>
+<p class="caption">Loop interface circuit mounted on a wood base</p>
+<p>Circuit boards for the loop interface are available from the Morse Telegraph
+Club. You’ll have to buy the circuit components yourself, mount and solder the
+components on the board, and provide your own enclosure. Write to <a href="mailto:interface@morsetelegraphclub.org">interface@morsetelegraphclub.org</a>
+for information on availability and cost of the circuit boards.</p>
+<h2><a name="adapters">USB-to-serial adapters</a></h2>
+<p>Most likely you’ll be using a USB adapter cable to provide the necessary
+serial port for your interface. It’s important to understand that MorseKOB
+uses the RS232 control lines of the serial interface, not the data lines. This
+means that an adapter that may perform very well in a more conventional
+application could be unsuitable for MorseKOB. To play it safe, use one of the
+following adapters that are known to work. And remember, you may have to install
+driver software that comes with your particular adapter.</p>
+<dl>
+  <dt>C2G (Cables to Go) USB to DB9 Serial Adapter Cable (product #26886)</dt>
+  <dd>I like this adapter because it’s compact and inexpensive (less than $20
+    at <a href="http://amazon.com" target="_blank">amazon.com</a>, <a href="http://tigerdirect.com" target="_blank">tigerdirect.com</a>,
+    and other online suppliers). However, some users have run into performance
+    problems, and it’s not compatible with the Mac.</dd>
+  <dt>Tripp Lite “Keyspan” High-Speed USB to Serial Adapter (model USA-19HS)</dt>
+  <dd>This is the one to use if you have a Mac. It works with Windows as well.</dd>
+  <dt>Dynex USB/PDA Serial Adapter Cable (model DX-UBDB9)</dt>
+  <dd>I don’t have personal experience with this adapter, but it’s reported
+    to perform well in situations where the C2G model fails.</dd>
+</dl>
+<h2><a name="snubbers">Snubbers</a></h2>
+<p>When a key in a telegraph loop is opened, the collapsing magnetic field in
+the inductors in the circuit (sounder and relay coils) caused by the sudden
+cessation of current flow creates a large transient voltage across the key
+contacts. A <i>snubber</i>, also known as a <i>spark suppressor</i> or <i>spark
+killer</i>, is a device used to damp this transient spike. In traditional
+telegraph circuits, the snubber was used to prevent pitting of the key contacts.
+With MorseKOB, however, the more important reason for using a snubber is to
+prevent interference or possible damage to sensitive components in the computer
+or USB-to-serial adapter.</p>
+<p class="image"><img border="0" src="images/snubber.jpg" width="450" height="300"></p>
+<p class="caption">A snubber in place across the sounder terminals</p>
+<p>The best place to put the snubber is directly across the terminals of every
+sounder or relay in the circuit, as this minimizes the amount of radiated
+electromagnetic interference. If that’s not practical, then snubbers should be
+placed across all keys in the circuit. (Note: a snubber is not required for the
+“key only” interface. It’s only an issue when a sounder or relay is in the
+circuit.)</p>
+<p>The following snubber designs have all been used successfully:</p>
+<dl>
+  <dt>RC network</dt>
+  <dd>The traditional Western Union snubber consisted of a 22&nbsp;&#937;
+    resistor in series with a 0.1&nbsp;&#956;Fd capacitor. It’s important that
+    the capacitor be nonpolarized (not electrolytic), and its voltage rating
+    should be at least 600 volts.&nbsp; You can make your own, or buy an
+    off-the-shelf snubber such as the <a href="http://www.cde.com/catalogs/Q-QRL.pdf" target="_blank">Cornell
+    Dubilier</a> model 104M06QC22 arc suppressor.</dd>
+  <dt>Diode</dt>
+  <dd>A simple diode, such as a 1N4005, makes a very effective snubber. The
+    polarity of the diode needs to be in the reverse direction of the normal
+    current flow. This approach has the possible disadvantage of making the
+    sounder slow to release, resulting in an undesirable sluggish sound.</dd>
+  <dt>Back-to-back Zeners</dt>
+  <dd>A pair of Zener diodes, connected in series with each other and with
+    opposite polarities, works well as a snubber. Unlike the simple diode
+    approach, you don’t have to worry about the direction of the current in
+    the circuit, and it’s less likely to result in sluggish response. Being
+    more compact than an RC network, it’s easier to conceal this type of
+    snubber under the base of a sounder. The voltage rating of the Zeners needs
+    to be greater than the normal voltage drop across the sounder.</dd>
+  <dt>Transorb</dt>
+  <dd>A bidirectional transient-voltage-suppression (TVS) diode, also known as a
+    <i>transorb</i>, is a device similar in function to the back-to-back Zeners
+    just described, but specifically engineered for high power operation and
+    integrated into a single package. As in the case of Zeners, the voltage
+    rating of the transorb needs to be greater than the normal voltage drop
+    across the sounder.</dd>
+  <dt>Neon bulb</dt>
+  <dd>I haven’t used this approach myself, but a standard NE-2 bulb is
+    reported to be an effective snubber. It has the unique appeal of flashing in
+    sync with the circuit transitions, so you always know if it’s working. The
+    lifetime of the bulb is a possible issue in this application.</dd>
+</dl>
+<h2><a name="portpins">Serial port pins</a></h2>
+<p>The following table identifies the RS232 lines used by the program to
+interface with an external key or sounder.</p>
+<div align="center">
+  <table border="0" cellpadding="5" cellspacing="0">
+    <tr>
+      <td valign="bottom" style="font-weight: bold" align="right">Function</td>
+      <td valign="bottom" style="font-weight: bold" align="center">RS232<br>
+        Line</td>
+      <td valign="bottom" style="font-weight: bold" align="center">DB9<br>
+        Pin</td>
+      <td valign="bottom" style="font-weight: bold" align="left">Color*</td>
+    </tr>
+    <tr>
+      <td align="right" valign="top">Manual key or<br>
+        paddle common</td>
+      <td align="center" valign="top">DTR</td>
+      <td align="center" valign="top">4</td>
+      <td align="left" valign="top">Orange</td>
+    </tr>
+    <tr>
+      <td align="right" valign="top">Manual key or<br>
+        dot paddle</td>
+      <td align="center" valign="top">DSR</td>
+      <td align="center" valign="top">6</td>
+      <td align="left" valign="top">Green</td>
+    </tr>
+    <tr>
+      <td align="right" valign="top">Dash paddle</td>
+      <td align="center" valign="top">CTS</td>
+      <td align="center" valign="top">8</td>
+      <td align="left" valign="top">Violet</td>
+    </tr>
+    <tr>
+      <td align="right" valign="top">Sounder<br>
+        output</td>
+      <td align="center" valign="top">RTS</td>
+      <td align="center" valign="top">7</td>
+      <td align="left" valign="top">Blue</td>
+    </tr>
+    <tr>
+      <td align="right" valign="top">Sounder<br>
+        ground</td>
+      <td align="center" valign="top">SG</td>
+      <td align="center" valign="top">5</td>
+      <td align="left" valign="top">Yellow</td>
+    </tr>
+  </table>
+</div>
+<blockquote>
+  <p>*The color code shown is for the Belkin model F2N209-06 serial extension
+  cable. Some other cables follow the same color code, some do not.</p>
+</blockquote>
+<p>&nbsp;</p>
+<p class="footer">Revised 2013-06-27<br>
+<a href="index.htm">MorseKOB Home Page</a></p>
+
+</body>
+
+</html>

@@ -1,0 +1,100 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>MorseKOB 4.0</title>
+</head>
+
+<body>
+
+<h2>MorseKOB 4.0</h2>
+<p>MorseKOB 4.0 is a collection of Python modules that can be used to create a
+customized version of MorseKOB. MorseKOB 4.0 works with Windows XP, Vista,
+Windows 7, and Windows 8.</p>
+<h3>Prerequisites</h3>
+<p>In order to use the MorseKOB 4.0 system, you'll need to have Python 3.2 or
+3.3, Pygame 1.9, and pySerial 2.6 on your computer. To install Python and
+Pygame, run the following files in the order given. You can accept all default
+settings.</p>
+<ol>
+  <li><a href="http://morsekob.org/python/python-3.3.0.msi">http://morsekob.org/python/python-3.3.0.msi</a></li>
+  <li><a href="http://morsekob.org/python/pygame-1.9.2pre.win32-py3.3.exe">http://morsekob.org/python/pygame-1.9.2pre.win32-py3.3.exe</a></li>
+</ol>
+<p>Then to install pySerial, do the following:</p>
+<ol>
+  <li>Open the file <a href="http://morsekob.org/python/pyserial-2.6.zip">http://morsekob.org/python/pyserial-2.6.zip</a>
+    and extract its contents (the single folder pyserial-2.6) to any folder on
+    your hard drive, say C:\pyserial.</li>
+  <li>Open a Command Prompt window and enter the following commands:<br>
+    <font face="monospace">cd C:\pyserial\pyserial-2.6<br>
+    C:\Python33\python.exe setup.py install</font></li>
+  <li>Delete the folder created in the first step (C:\pyserial).</li>
+</ol>
+<h3>MorseMHC</h3>
+<p>MorseMHC is a program that was developed for the Civil War exhibit at the
+Minnesota History Center. It receives text from the keyboard, a file, or a web
+page, displays the text on the screen, and sends it as Morse to the speakers
+and/or an attached sounder. In its default configuration, the text consists of
+news dispatches from 150 years ago, and they're displayed on a Civil War-era
+telegram form.</p>
+<p>MorseMHC uses the MorseKOB 4.0 modules, and it can serve as a template for
+implementing your own KOB program. Be sure to contact me if you need any help
+with this.</p>
+<h4>Installing MorseMHC</h4>
+<p>To download the latest version of MorseMHC, go to <a href="http://morsekob.org/morsekob40/MorseMHC.zip">morsekob.org/morsekob40/MorseMHC.zip</a>
+and copy the files and folders to a new folder (you could name it MorseMHC) on
+your hard drive. The easiest way is just to open the zip file instead of saving
+it, and then &quot;extract all files&quot; to the MorseMHC folder, creating a
+new MorseMHC folder in the process if necessary.</p>
+<h4>Running MorseMHC</h4>
+<p>To run the program, open the MorseMHC folder and double-click on the
+MorseMHC.py file. Your monitor should go into full-screen mode and Civil War
+articles will start to appear on telegram forms that scroll off the top of the
+screen as they're received. You should also hear Morse coming out of your
+speakers.</p>
+<p>The normal way of terminating the program is by pressing the Escape key. If
+that doesn't work, you can get out of full-screen mode by pressing Alt-Tab. If
+you lose control of your mouse, try pressing Ctrl-Alt-Del and then cancelling
+out of the Task Manager menu.</p>
+<p>If you like, you can create a shortcut to MorseMHC.py and place it on the
+desktop. You can also copy the shortcut to the system startup folder to launch
+the program automatically whenever Windows is booted.</p>
+<p>If the program doesn't work as expected, run it again by double-clicking on
+the MorseMHC test.bat file instead, and send me copies of the log.txt and
+err.txt files that are created.</p>
+<h4>Customizing MorseMHC</h4>
+<p>If you open MorseMHC.py in a text editor, you'll see there are a number of
+parameters near the beginning of the file that control various features. For
+example, you can change the code speed, the number of articles that are sent
+before repeating, and the amount of delay between articles and groups of
+articles.</p>
+<p>To drive an external sounder, you'll need to edit the file
+...\MorseMHC\kob\sounder.py. You can use any text editor, such as Notepad. If
+you want to get fancy, you can use the IDLE editor that comes with Python. In
+any case, what you need to do is change the line that currently reads PORT =
+'COM3' to whatever port your interface is on.</p>
+<p>Similarly, you can change the color and layout of the telegram form and the
+font size by modifying constants in the kob\display.py file. I recommend you
+keep notes of any changes you make to these files, because if later on you
+install an updated version of the program your changes will be lost and you'll
+have to restore the changes.</p>
+<p>Normally, MorseMHC fetches its Civil War articles from the MorseKOB web
+server, and therefore it requires an internet connection. If you want to run the
+program without an internet connection, you can configure it to get its data
+from a local file instead. To do that, comment out the SOURCE =
+'url=http://home.comcast.net/~morsekob/rss/civilwar.xml' line by inserting a #
+character at the beginning of the line, and uncomment the SOURCE =
+'file=civilwar.xml' line.</p>
+<p>If you comment out both of these lines and uncomment the SOURCE = None line,
+then instead of fetching Civil War news articles the program takes input from
+the keyboard and sends it in Morse to the sounder.</p>
+<p><br>
+Les Kerr<br>
+2013-06-08</p>
+<p>&nbsp;</p>
+
+</body>
+
+</html>
