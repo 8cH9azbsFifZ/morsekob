@@ -47,3 +47,9 @@ The [requirements](https://sites.google.com/site/morsekob/server/requirements).
 The [server software](https://sites.google.com/site/morsekob/server/software) resides now in the
 directory Server.
 
+
+Code Quality
+============
+This is experimental code.
+
+
