@@ -50,9 +50,16 @@ The [requirements](https://sites.google.com/site/morsekob/server/requirements).
 The [server software](https://sites.google.com/site/morsekob/server/software) resides now in the
 directory Server.
 
+Uninstalling
+============
+On raspi:
+sudo rm -rf /usr/local/lib/python2.7/dist-packages/pykob
+sudo rm -rf /usr/local/lib/python2.7/dist-packages/PyKOB-1.0.0.egg-info
+
 
 Code Quality
 ============
 This is experimental code.
+
 
 
