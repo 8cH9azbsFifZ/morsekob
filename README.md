@@ -1,15 +1,16 @@
 morsekob
 ========
 
-This repository is just for development purposes -> OSX testing.
-
 This is an implementation of [MOIP](https://github.com/8cH9azbsFifZ/moip).
 
-
+Scope of this repository
+========================
+This repository is just for development purposes -> OSX testing.
 Further information: https://sites.google.com/site/morsekob/morsekob40. And
 even this software is only in alpha status. If you want to use morsekob,
 better go to [morsekob.org](http://www.morsekob.org).
 
+= Building
 The [requirements](https://sites.google.com/site/morsekob/morsekob40/requirements) describe the 
 build process:
 
