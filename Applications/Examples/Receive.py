@@ -16,7 +16,7 @@ Example:
 
 import sys
 from time import sleep
-from morsekob import VERSION, internet, sounder, morse
+from pykob import VERSION, internet, sounder, morse # FIXME - sounder does not exist
 import config
 
 WIRE     = 101  # default KOB wire to connect to
