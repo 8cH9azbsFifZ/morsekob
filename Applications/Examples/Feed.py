@@ -38,8 +38,8 @@ Examples:
 import sys
 import time, datetime
 import threading
-import morsekob
-from morsekob import newsreader, morse, internet, kob, log
+import pykob
+from pykob import newsreader, morse, internet, kob, log
 
 VERSION     = '1.3'
 DATEFORMAT  = '%a, %d %b %Y %H:%M:%S'
