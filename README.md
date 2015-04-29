@@ -37,8 +37,8 @@ python -m pykob.syscheck
 The [applications](https://sites.google.com/site/morsekob/morsekob40/downloads) are under Applications
 
 PYTHONPATH=$PYTHONPATH:/Library/Python/2.7/site-packages/ python2.7 Sample.py 
-
-Examples with working audio callbacl... http://people.csail.mit.edu/hubert/pyaudio/
+Alternatively:
+python Time.py c 33 "ok" 
 
 
 # Server installation
