@@ -28,7 +28,7 @@ Examples:
 import sys
 import time
 import threading
-from morsekob import newsreader, morse, internet, kob
+from pykob import newsreader, morse, internet, kob
 import config
 
 VERSION = '1.2'
