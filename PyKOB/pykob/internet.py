@@ -12,6 +12,7 @@ import threading
 import time
 from pykob import VERSION, log
 
+# Server
 HOST = 'mtc-kob.dyndns.org'
 PORT = 7890
 
