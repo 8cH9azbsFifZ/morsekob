@@ -7,7 +7,7 @@ Sends Morse code to a serial port and/or the speakers.
 
 """
 
-from morsekob import kob, morse
+from pykob import kob, morse
 import time
 
 AUDIO = True

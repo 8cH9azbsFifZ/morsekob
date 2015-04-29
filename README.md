@@ -10,6 +10,11 @@ Further information: https://sites.google.com/site/morsekob/morsekob40. And
 even this software is only in alpha status. If you want to use morsekob,
 better go to [morsekob.org](http://www.morsekob.org).
 
+# Running example Applications
+cd PyKOB
+PYTHONPATH=./ python ../Applications/Examples/Sample.py 
+
+
 # Building
 The [requirements](https://sites.google.com/site/morsekob/morsekob40/requirements) describe the 
 build process. At first: installation of the dependencies.
@@ -31,6 +36,7 @@ Verification of the installation:
 sudo port select python python27
    --> osx: python2.7 -m pykob.syscheck
 python -m pykob.syscheck
+
 
 
 # Applications
