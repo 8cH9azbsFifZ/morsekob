@@ -55,6 +55,11 @@ sudo rm -rf /usr/local/lib/python2.7/dist-packages/pykob
 sudo rm -rf /usr/local/lib/python2.7/dist-packages/PyKOB-1.0.0.egg-info
 
 
+# Running Standalone Ticker
+cd Applications/MorseWF
+python FeedWF.py 33 "Today's News, 20 wpm, AC" "http://rss.news.yahoo.com/rss/topstories" 20
+
+
 Code Quality
 ============
 This is experimental code.
