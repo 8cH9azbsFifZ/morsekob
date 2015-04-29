@@ -25,7 +25,7 @@ from morsekob import internet, morse, kob
 
 # specify configuration options
 ID = 'CB - NorthPole'
-WIRE = 119
+WIRE = 33
 WPM = 18
 AUDIO = False
 PORT = None
