@@ -21,12 +21,15 @@ DEBOUNCE  = 0.010  # time to ignore transitions due to contact bounce (sec)
 CODESPACE = 0.120  # amount of space to signal end of code sequence (sec)
 CKTCLOSE  = 0.75  # length of mark to signal circuit closure (sec)
 
+print "Testing"
+
 if sys.platform == 'win32':
     from ctypes import windll
     windll.winmm.timeBeginPeriod(1)  # set clock resoluton to 1 ms (Windows only)
 
 class KOB:
     def __init__(self, port=None, audio=True, echo=False, callback=None):
+        print "Init KOB"
         if port and ok:
             try:
                 self.port = serial.Serial(port)
@@ -61,7 +64,7 @@ class KOB:
 
     def key(self):
         code = ()
-        while True:
+        while True: # FIXME: this is a bad main loop TBD.
             s = self.port.getDSR()
             if s != self.keyState:
                 self.keyState = s
@@ -90,7 +93,7 @@ class KOB:
             time.sleep(0.001)
 
     def sounder(self, code):
-        ##print "sounder"
+        print "sounder"
         for c in code:
             if c < -3000:
                 c = -500
@@ -109,7 +112,7 @@ class KOB:
                 self.setSounder(False)
 
     def setSounder(self, state):
-        ##print "set sounder"
+        print "set sounder"
         if state != self.sdrState:
             ##print "state update"
             self.sdrState = state
