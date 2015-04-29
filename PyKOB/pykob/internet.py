@@ -4,7 +4,11 @@ internet module
 
 Reads/writes code sequences from/to a KOB wire.
 
+Implements the CWCom protocol
+
 """
+
+# FIXME: remove magic numbers
 
 import socket
 import struct
@@ -12,10 +16,12 @@ import threading
 import time
 from pykob import VERSION, log
 
-# Server
+# Server connection data
+# FIXME: put this in a config file
 HOST = 'mtc-kob.dyndns.org'
 PORT = 7890
 
+# Magic numbers of the CWCom protocol
 DIS = 2  # Disconnect
 DAT = 3  # Code or ID
 CON = 4  # Connect
