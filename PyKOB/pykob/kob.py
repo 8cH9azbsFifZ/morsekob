@@ -44,6 +44,8 @@ class KOB:
         self.sdrState = False  # True: mark, False: space
         self.tLastSdr = time.time()  # time of last sounder transition
         self.setSounder(True)
+        self.audio.tone_obj = ToneSound(frequency = 800, volume = .5)
+
         time.sleep(0.5)
         if self.port:
             self.keyState = self.port.getDSR()  # True: closed, False: open
@@ -120,15 +122,10 @@ class KOB:
                 if self.port:
                     self.port.setRTS(True)
                 if self.audio:
-                    audio.play(1)  # click
-                    ##print "click" 
-                    ##audio.play_click()  # click
+                    self.audio.tone_obj.play(-1)
             else:
                 if self.port:
                     self.port.setRTS(False)
                 if self.audio:
-                    audio.play(0)  # clack
-                    ##print "clack" 
-                    ##audio.play_clack()  # clack
+                    self.audio.tone_obj.stop()
 
-##windll.winmm.timeEndPeriod(1)
